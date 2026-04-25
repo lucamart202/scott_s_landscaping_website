@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;display=swap" rel="stylesheet"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Free Estimate - Scott's Landscaping</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&amp;family=Noto+Serif:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            colors: {
+                primary: "#17331a",
+                "on-primary": "#FFFFFF",
+                "primary-container": "#2E5A34",
+                "on-primary-container": "#FFFFFF",
+                "primary-fixed": "#A8F7B8",
+                "primary-fixed-dim": "#8FB28A",
+                secondary: "#8a5019",
+                "on-secondary": "#FFFFFF",
+                "secondary-container": "#C98A51",
+                "on-secondary-container": "#FFFFFF",
+                tertiary: "#053511",
+                "on-tertiary": "#FFFFFF",
+                "tertiary-container": "#1A5D28",
+                "on-tertiary-container": "#B3F2C2",
+                error: "#B3261E",
+                "on-error": "#FFFFFF",
+                "error-container": "#F9DEDC",
+                "on-error-container": "#410E0B",
+                background: "#FFFBFE",
+                "on-background": "#1C1B1F",
+                surface: "#FFFBFE",
+                "on-surface": "#1C1B1F",
+                "surface-variant": "#E7E0EC",
+                "on-surface-variant": "#49454E",
+                "surface-container": "#F3EEF6",
+                "surface-tint": "#8FB28A",
+                outline: "#79747E",
+                "outline-variant": "#CAC7D0",
+                "inverse-on-surface": "#F4EFF4",
+                "inverse-surface": "#313033",
+            },
+            fontFamily: {
+                body: "Manrope, sans-serif",
+                serif: "Noto Serif, serif",
+                label: "Manrope, sans-serif",
+            },
+            fontSize: {
+                "h1": "48px",
+                "h2": "36px",
+                "h3": "28px",
+                "body-md": "15px",
+                "body-sm": "14px",
+                "label": "12px",
+            },
+            spacing: {
+                gutter: "24px",
+                "stack-sm": "8px",
+                "stack-md": "12px",
+                "stack-lg": "24px",
+                "section-v-padding-sm": "24px",
+                "section-v-padding-md": "48px",
+                "section-v-padding-lg": "64px",
+            },
+        }
+    }
+};
+</script>
+</head>
+<body class="bg-surface text-on-surface font-body-md min-h-screen flex flex-col antialiased">
+<!-- TopAppBar -->
+<nav class="bg-white/95 dark:bg-stone-950/95 backdrop-blur-sm sticky top-0 w-full z-50 border-b border-[#C49A6C]/30 dark:border-stone-800 flat no shadows">
+<div class="flex justify-between items-center max-w-[1200px] mx-auto px-6 h-24">
+<a class="text-2xl font-bold text-[#2D4A2F] dark:text-[#8FB28A] tracking-tighter" href="../home_page/code.html">Scott's Landscaping</a>
+<div class="hidden md:flex space-x-8 items-center">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors font-serif text-lg tracking-tight hover:bg-[#8FB28A]/10 transition-all duration-300 px-3 py-2 rounded-md" href="../home_page/code.html">Home</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors font-serif text-lg tracking-tight hover:bg-[#8FB28A]/10 transition-all duration-300 px-3 py-2 rounded-md" href="../about_us/code.html">About Us</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors font-serif text-lg tracking-tight hover:bg-[#8FB28A]/10 transition-all duration-300 px-3 py-2 rounded-md" href="../services_page_pixel_perfect_replica/code.html">Services</a>
+
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors font-serif text-lg tracking-tight hover:bg-[#8FB28A]/10 transition-all duration-300 px-3 py-2 rounded-md" href="../reviews/code.html">
+    Reviews
+</a>
+</div>
+<a class="hidden md:inline-flex items-center justify-center px-6 py-3 bg-primary text-on-primary font-label text-label uppercase tracking-widest hover:bg-surface-tint transition-colors duration-300 rounded" href="../free_estimate_form/code.html">Free Estimate</a>
+<!-- Mobile menu button (visual only) -->
+<button class="md:hidden text-primary p-2" style="">
+<span class="material-symbols-outlined" style='font-variation-settings: "FILL" 0;'>menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow py-section-v-padding-sm lg:py-section-v-padding-lg px-6">
+<div class="max-w-[1000px] mx-auto flex flex-col lg:flex-row gap-12 lg:gap-24">
+<!-- Left Column: Form -->
+<div class="flex-1 w-full max-w-[640px] mx-auto lg:mx-0">
+<div class="mb-10">
+<h1 class="font-h1 text-h1 text-primary mb-stack-sm">Let's talk about your project.</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">No pressure, no obligation — just an honest conversation.</p>
+</div>
+<!-- Personal Note -->
+<div class="flex items-center gap-4 bg-surface-container-low p-4 rounded-lg mb-8 border border-surface-variant">
+<img alt="Portrait of Scott" class="w-16 h-16 rounded-full object-cover border-2 border-surface-container-lowest shadow-sm" data-alt="Portrait of a friendly, professional middle-aged man in a casual collared shirt, outdoors with soft natural lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuByheXSP8l0LqhMWSh0xlL6VOsUCtXIGtOWIk7klyFC_9YXAwxY6A4yyWM096tYnjUTfieN1C_WS618Dw6RA07WwomuyGCgJ3dSHfRpWTB4HMzRIhq61luYOF4ImgBsxkKDNebrinbzb8Fff-tnPXZ2jKE9dZ4giPsd0uL9gfDahNXkWIzexnxNrKG_q_u8Hr1wv8ibOtsDO9vc73CpGwEtMIwnpnFiL93KojUl_C2r_5g3JPTMqlj-Qo8rNn0O_LKh30f6qAPlB2w"/>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">"I read every message myself and respond personally." <br/><span class="font-label text-label uppercase text-primary mt-1 inline-block">— Scott</span></p>
+</div>
+<!-- Form -->
+<form class="space-y-6">
+<div>
+<label class="block font-label text-label uppercase text-on-surface mb-2" for="fullName">Full Name</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" id="fullName" name="fullName" type="text"/>
+</div>
+<div>
+<label class="block font-label text-label uppercase text-on-surface mb-2" for="address">Where's the project?</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" id="address" name="address" placeholder="Louisville address or zip code" type="text"/>
+</div>
+<div>
+<label class="block font-label text-label uppercase text-on-surface mb-2" for="phone">Phone number</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" id="phone" name="phone" type="tel"/>
+</div>
+<div>
+<label class="block font-label text-label uppercase text-on-surface mb-2" for="serviceType">Type of service</label>
+<select class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors appearance-none" id="serviceType" name="serviceType">
+<option value="">Select a service</option>
+<option value="design">Design</option>
+<option value="installation">Installation</option>
+<option value="lighting">Lighting</option>
+<option value="replacement">Replacement</option>
+<option value="tree-planting">Tree Planting</option>
+<option value="not-sure">Not sure yet</option>
+</select>
+</div>
+<div>
+<label class="block font-label text-label uppercase text-on-surface mb-2" for="projectDetails">Tell me about your project</label>
+<textarea class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors resize-none" id="projectDetails" name="projectDetails" placeholder="What are you hoping to achieve?" rows="4"></textarea>
+</div>
+<div>
+<label class="block font-label text-label uppercase text-on-surface mb-2">Upload photos (Optional)</label>
+<div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-outline-variant border-dashed rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-colors cursor-pointer">
+<div class="space-y-1 text-center">
+<span class="material-symbols-outlined text-outline text-3xl mb-2" data-icon="cloud_upload">cloud_upload</span>
+<div class="flex text-body-sm text-on-surface-variant justify-center">
+<label class="relative cursor-pointer rounded-md font-medium text-primary hover:text-primary-container focus-within:outline-none" for="file-upload">
+<span>Upload a file</span>
+<input class="sr-only" id="file-upload" multiple="" name="file-upload" type="file"/>
+</label>
+<p class="pl-1">or drag and drop</p>
+</div>
+<p class="font-label text-label text-outline-variant">PNG, JPG up to 10MB</p>
+</div>
+</div>
+</div>
+<div class="pt-4">
+<button class="w-full bg-primary text-on-primary font-label text-label uppercase tracking-wider py-4 rounded-lg hover:bg-surface-tint transition-colors border-none shadow-none text-center" type="submit">
+                            Send my request to Scott
+                        </button>
+</div>
+</form>
+<!-- Trust Signals (Form Footer) -->
+<div class="mt-8 flex flex-wrap gap-6 justify-center text-center">
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="verified">verified</span>
+<span class="font-label text-label text-on-surface-variant uppercase">Free estimate</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="handshake">handshake</span>
+<span class="font-label text-label text-on-surface-variant uppercase">No obligation</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="forum">forum</span>
+<span class="font-label text-label text-on-surface-variant uppercase">Personal response</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Sidebar (Desktop) -->
+<aside class="w-full lg:w-[320px] shrink-0 mt-12 lg:mt-0 flex flex-col gap-8 hidden md:flex">
+<!-- Contact Direct -->
+<div class="bg-surface-container rounded-lg p-8 border border-surface-variant">
+<p class="font-label text-label uppercase text-on-surface-variant mb-2">Call directly</p>
+<a class="font-h3 text-h3 text-primary hover:text-surface-tint transition-colors block mb-1" href="tel:5028214542">
+                        (502) 821-4542
+                    </a>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Available Mon-Fri, 8am - 6pm</p>
+</div>
+<!-- Service Area Map -->
+<div>
+<h3 class="font-label text-label uppercase text-on-surface mb-3 border-b border-surface-variant pb-2">Service Area</h3>
+<div class="rounded-lg overflow-hidden border border-surface-variant h-48 bg-surface-container-low">
+<img alt="Map of Louisville" class="w-full h-full object-cover opacity-80 mix-blend-multiply" data-alt="Stylized, minimalist map graphic highlighting the Louisville area with subtle earthy tones." data-location="Louisville, KY" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpTge9E_5l2ft8MK1dyao2BlYNglrzyyqOpVrJJdRvUMfiyb0TazD1U_iBtcuIU9md-u_mkKCCgW6Kt92h6QwtEmbcS8XJNaOx8bBgk1xAq_veEW5Rr_b1-O_NRx9tdy1K9DTG8cLNyWfq6IE8ZIVfB0YGq3dii7W5LXA1n3_DUc7D5M0KnEqaxLgtbN-_Th3eooJ1TFhFazzRtqE1TQQgiHkWQUOWBLK6Y9WgYPgfV9cRJ04hnucbm7R8RCRjYipHlh400B5KVfY"/>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 text-center">Proudly serving Greater Louisville.</p>
+</div>
+<!-- Reviews -->
+<div>
+<h3 class="font-label text-label uppercase text-on-surface mb-3 border-b border-surface-variant pb-2">Client Feedback</h3>
+<div class="bg-surface-container rounded-lg p-6 mb-4 border border-surface-variant">
+<div class="flex text-secondary mb-2">
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface italic mb-3">"Scott transformed our backyard into exactly what we envisioned. True craftsmanship."</p>
+<p class="font-label text-label text-on-surface-variant uppercase">— The Miller Family, Highlands</p>
+</div>
+<div class="bg-surface-container rounded-lg p-6 border border-surface-variant">
+<div class="flex text-secondary mb-2">
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface italic mb-3">"Professional, punctual, and beautiful results. Highly recommend."</p>
+<p class="font-label text-label text-on-surface-variant uppercase">— Sarah T., St. Matthews</p>
+</div>
+</div>
+<!-- Badges -->
+<div class="flex justify-center mt-4">
+<div class="bg-surface-container-low border border-surface-variant rounded px-4 py-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="award_star">award_star</span>
+<span class="font-label text-label text-on-surface uppercase">Top Rated Pro</span>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-900 dark:bg-black w-full pt-20 pb-10 tonal shift against main surface flat no shadows">
+<div class="max-w-[1200px] mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
+<!-- Brand & Copyright -->
+<div class="md:col-span-1">
+<span class="text-xl font-bold text-white mb-4 block font-serif tracking-wide leading-relaxed" style="">Scott's Landscaping</span>
+<p class="text-stone-100 dark:text-stone-300 font-serif text-sm tracking-wide leading-relaxed mt-4" style="">
+                    © 2026 Scott's Landscaping LLC. Louisville Proud.
+                </p>
+</div>
+<!-- Links -->
+<div class="md:col-span-2 grid grid-cols-2 gap-8">
+<div class="flex flex-col space-y-3">
+<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed inline-block w-fit" href="../home_page/code.html">Home</a>
+<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed inline-block w-fit" href="../about_us/code.html">About Us</a>
+<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed inline-block w-fit" href="../services_page_pixel_perfect_replica/code.html">Services</a>
+</div>
+<div class="flex flex-col space-y-3">
+
+<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed inline-block w-fit" href="../reviews/code.html">Reviews</a>
+<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed inline-block w-fit" href="#" style="">Contact</a>
+</div>
+</div>
+<!-- Contact Info (Implicitly requested by general footer patterns) -->
+<div class="md:col-span-1 flex flex-col space-y-4 text-stone-400 font-serif text-sm tracking-wide leading-relaxed">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined" style='font-variation-settings: "FILL" 0;'>call</span>
+<span class="" style="">(502) 555-0198</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined" style='font-variation-settings: "FILL" 0;'>mail</span>
+<span class="" style="">hello@scottslandscaping.com</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined" style='font-variation-settings: "FILL" 0;'>location_on</span>
+<span class="" style="">Louisville, KY</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

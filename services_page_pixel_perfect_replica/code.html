@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;display=swap" rel="stylesheet"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Services - Scott's Landscaping</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&amp;family=Noto+Serif:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            colors: {
+                primary: "#17331a",
+                "on-primary": "#FFFFFF",
+                "primary-container": "#2E5A34",
+                "on-primary-container": "#FFFFFF",
+                "primary-fixed": "#A8F7B8",
+                "primary-fixed-dim": "#8FB28A",
+                secondary: "#8a5019",
+                "on-secondary": "#FFFFFF",
+                "secondary-container": "#C98A51",
+                "on-secondary-container": "#FFFFFF",
+                tertiary: "#053511",
+                "on-tertiary": "#FFFFFF",
+                "tertiary-container": "#1A5D28",
+                "on-tertiary-container": "#B3F2C2",
+                error: "#B3261E",
+                "on-error": "#FFFFFF",
+                "error-container": "#F9DEDC",
+                "on-error-container": "#410E0B",
+                background: "#FFFBFE",
+                "on-background": "#1C1B1F",
+                surface: "#FFFBFE",
+                "on-surface": "#1C1B1F",
+                "surface-variant": "#E7E0EC",
+                "on-surface-variant": "#49454E",
+                "surface-container": "#F3EEF6",
+                "surface-tint": "#8FB28A",
+                outline: "#79747E",
+                "outline-variant": "#CAC7D0",
+                "inverse-on-surface": "#F4EFF4",
+                "inverse-surface": "#313033",
+            },
+            fontFamily: {
+                body: "Manrope, sans-serif",
+                serif: "Noto Serif, serif",
+                label: "Manrope, sans-serif",
+            },
+            fontSize: {
+                "h1": "48px",
+                "h2": "36px",
+                "h3": "28px",
+                "body-md": "15px",
+                "body-sm": "14px",
+                "label": "12px",
+            },
+            spacing: {
+                gutter: "24px",
+                "stack-sm": "8px",
+                "stack-md": "12px",
+                "stack-lg": "24px",
+                "section-v-padding-sm": "24px",
+                "section-v-padding-md": "48px",
+                "section-v-padding-lg": "64px",
+            },
+        }
+    }
+};
+</script>
+</head>
+<body class="font-sans antialiased selection:bg-moss selection:text-white">
+<!-- TopAppBar -->
+<nav class="bg-white/95 dark:bg-stone-950/95 backdrop-blur-sm sticky top-0 w-full z-50 border-b border-[#C49A6C]/30 dark:border-stone-800 flat no shadows">
+<div class="flex justify-between items-center max-w-[1200px] mx-auto px-6 h-24">
+<a class="text-2xl font-bold text-[#2D4A2F] dark:text-[#8FB28A] tracking-tighter" href="../home_page/code.html">Scott's Landscaping</a>
+<div class="hidden md:flex space-x-8 items-center">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors font-serif text-lg tracking-tight hover:bg-[#8FB28A]/10 transition-all duration-300 px-3 py-2 rounded-md" href="../home_page/code.html">Home</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors font-serif text-lg tracking-tight hover:bg-[#8FB28A]/10 transition-all duration-300 px-3 py-2 rounded-md" href="../about_us/code.html">About Us</a>
+<a aria-current="page" class="text-[#2D4A2F] dark:text-[#8FB28A] font-['Playfair_Display',_serif] text-xl tracking-tight relative group px-1 py-1" href="../services_page_pixel_perfect_replica/code.html">
+    Services
+    <span class="absolute bottom-0 left-0 w-full h-[2px] bg-[#2D4A2F] dark:bg-[#8FB28A]"></span>
+</a>
+
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors font-serif text-lg tracking-tight hover:bg-[#8FB28A]/10 transition-all duration-300 px-3 py-2 rounded-md" href="../reviews/code.html">
+    Reviews
+</a>
+</div>
+<a class="hidden md:inline-flex items-center justify-center px-6 py-3 bg-primary text-on-primary font-label text-label uppercase tracking-widest hover:bg-surface-tint transition-colors duration-300 rounded" href="../free_estimate_form/code.html">Free Estimate</a>
+<!-- Mobile menu button (visual only) -->
+<button class="md:hidden text-primary p-2" style="">
+<span class="material-symbols-outlined" style='font-variation-settings: "FILL" 0;'>menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-24">
+<!-- BEGIN: Hero Section -->
+<section class="py-24 px-6 md:px-12 max-w-5xl mx-auto text-center">
+<h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight text-primary text-balance mx-auto">
+        Everything your outdoor space needs — designed and installed by me.
+      </h1>
+</section>
+<!-- END: Hero Section -->
+<!-- BEGIN: Landscape Design Section -->
+<section class="py-16 px-6 md:px-12 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16 bg-white">
+<div class="w-full md:w-1/2">
+<img alt="Landscape Development Plan Blueprint" class="w-full h-auto object-cover border border-gray-200 blueprint-shadow p-2 bg-white" src="https://lh3.googleusercontent.com/aida/ADBb0uiJEY2BwcRIdPq9eXoK85rUqXpAUAwq9hnolG8CVKa9KUawNwJRYHr32AZK4M7iFrEGVs5DLaorIx2DOKnzJp2GtTxhhbvsPNIw-RQ744TaEd2-Av0Q54WfXQsuMq31TpA7Zt67nZ5g9kwYOc7rW8s0KTpuga1euv6Vu-pQ7yqQlZdwm8EEyNiAqcYfao8v4ZfqAi3p7S4ALL8Hw8dnCN7DLu6CuNLZBCCPN5HZ7h6FVF8VzB5bYUK2nA"/>
+</div>
+<div class="w-full md:w-1/2 space-y-6">
+<h2 class="font-serif text-3xl md:text-4xl font-semibold text-primary">Landscape Design</h2>
+<p class="text-mediumgray leading-relaxed">
+          Every great outdoor space begins with a thoughtful plan. My approach blends your vision with my understanding of your site's unique characteristics. I present custom hand-drawn plans illustrating the balance of hardscapes, native plants, and open space to bring your dream property to life.
+        </p>
+<a class="inline-flex bg-primary text-white text-xs font-bold tracking-widest uppercase px-8 py-4 rounded hover:bg-moss transition-colors mt-4" href="../portfolio/code.html">See Design Portfolio &gt;</a>
+</div>
+</section>
+<!-- END: Landscape Design Section -->
+<!-- BEGIN: Landscape Installation Section -->
+<section class="py-24 px-6 md:px-12 max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-16 bg-linen">
+<div class="w-full md:w-1/2 space-y-8">
+<h2 class="font-serif text-3xl md:text-4xl font-semibold text-primary">Landscape Installation</h2>
+<div class="space-y-6">
+<div class="flex gap-6">
+<span class="font-serif text-3xl text-tan font-bold opacity-80">01</span>
+<div>
+<h3 class="font-bold text-sm tracking-wider uppercase text-primary mb-2">Site Preparation</h3>
+<p class="text-mediumgray text-sm leading-relaxed">Careful clearing and soil amendment to give your new plants the best start.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<span class="font-serif text-3xl text-tan font-bold opacity-80">02</span>
+<div>
+<h3 class="font-bold text-sm tracking-wider uppercase text-primary mb-2">Planting &amp; Hardscaping</h3>
+<p class="text-mediumgray text-sm leading-relaxed">Precise placement of local flora, stone borders, and structural elements.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<span class="font-serif text-3xl text-tan font-bold opacity-80">03</span>
+<div>
+<h3 class="font-bold text-sm tracking-wider uppercase text-primary mb-2">Final Walkthrough</h3>
+<p class="text-mediumgray text-sm leading-relaxed">A joint tour of your new landscape to ensure every detail meets our standard.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2 flex justify-end">
+<img alt="Garden Cross-Section Blueprint" class="w-full max-w-lg h-auto object-cover border border-gray-200 blueprint-shadow p-2 bg-white" src="https://lh3.googleusercontent.com/aida/ADBb0ugU3ICw73c3XgTShw-eNvSW61H17-VKWVQeZ4kGxM-4IgdF9xJtF6Yu_4jemEv4mMDbFggaTp32PEsR3wffT3_E2DkFTECo3wS2UTPgsBG4S_h_2rMKjF0_Jl162ftWx8xIa-xztBFAbO2mCOy-lS28yp_0VtAlaUIUYgZOPyrPHIrNZB1MG4z5-IGIqPHVMUhchTtdoO72UYZI1wY7WgkPlfnz078owcGlv04zukjZSfzTn0RD8sTlVpw"/>
+</div>
+</section>
+<!-- END: Landscape Installation Section -->
+<!-- BEGIN: Landscape Lighting Section -->
+<section class="py-24 px-6 md:px-12 max-w-5xl mx-auto text-center space-y-12 bg-white">
+<div class="space-y-4 max-w-3xl mx-auto">
+<h2 class="font-serif text-3xl md:text-4xl font-semibold text-primary">Landscape Lighting</h2>
+<p class="text-mediumgray leading-relaxed text-balance">
+          Extend the beauty of your garden into the evening. Subtle low-voltage lighting enhances architectural features, illuminates pathways for safety, and creates a warm, inviting nighttime showcase.
+        </p>
+</div>
+<div class="w-full">
+<img alt="Landscape Lighting Plan Blueprint" class="w-full h-auto object-cover border border-gray-200 blueprint-shadow p-2 bg-white max-w-4xl mx-auto" src="https://lh3.googleusercontent.com/aida/ADBb0uhIsykbjMrSJEmuKXWw_2DkyfpW3l-YraGLxANHHYElGtmFOADaKAgunb0ibq5WU2n98PWwcEg3tRpa6ubvmYgwFy-mjwKbN83K2tJcir2ARF1PS5Lxu83Z0trZh6wwVujWi2JHDo3pOFYWVCh1LLwPahzczvDLw151Pe0VNlENpSGzuq6Bcf-Jh5FbcT1kAg0mBxQdl1Umm_L-PD345CSvjPY8yRXlovMgt-IT6uzyA6KqLXOmYw0e9E0"/>
+</div>
+</section>
+<!-- END: Landscape Lighting Section -->
+<!-- BEGIN: Secondary Services Grid -->
+<section class="py-24 px-6 md:px-12 bg-surface-tint/30">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Landscape Replacement Card -->
+<div class="bg-white p-10 rounded-lg shadow-sm border border-gray-100 space-y-4">
+<div class="text-primary text-2xl mb-6">
+<!-- Icon placeholder -->
+<svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2L8 9H11V20H13V9H16L12 2Z"></path></svg>
+</div>
+<h3 class="font-serif text-2xl font-semibold text-primary">Landscape Replacement</h3>
+<p class="text-mediumgray text-sm leading-relaxed">
+            Overgrown or outdated landscapes can detract from your property's value. We carefully remove old, struggling plants and replace them with fresh, resilient varieties suited for the current environment.
+          </p>
+</div>
+<!-- Winter Tree Planting Card -->
+<div class="bg-white p-10 rounded-lg shadow-sm border border-gray-100 space-y-4">
+<div class="text-primary text-2xl mb-6">
+<!-- Icon placeholder -->
+<svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M12 3v18m-9-9h18m-4.5-4.5L7.5 16.5M7.5 7.5l9 9" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</div>
+<h3 class="font-serif text-2xl font-semibold text-primary">Winter Tree Planting</h3>
+<p class="text-mediumgray text-sm leading-relaxed">
+            Contrary to popular belief, winter is an ideal time to plant certain trees. Dormancy reduces transplant shock, allowing roots to establish before the spring growth spurt. Let's discuss which species thrive with winter planting.
+          </p>
+</div>
+</div>
+</section>
+<!-- END: Secondary Services Grid -->
+</main>
+<!-- Final CTA -->
+<section class="bg-primary text-on-primary py-section-v-padding-lg px-6">
+<div class="max-w-[800px] mx-auto text-center">
+<h2 class="font-h2 text-h2 mb-6" style="">Ready to transform your outdoor space?</h2>
+<p class="font-body-md text-body-md text-primary-fixed-dim mb-10" style="">
+                    Let's discuss your vision and see how we can bring it to life with our expert craftsmanship.
+                </p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<a class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-label text-label uppercase tracking-widest hover:bg-surface-container transition-colors duration-300 rounded" href="#" style="">
+                        Request a Free Estimate
+                    </a>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-stone-900 dark:bg-black w-full pt-20 pb-10 tonal shift against main surface flat no shadows">
+<div class="max-w-[1200px] mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
+<!-- Brand & Copyright -->
+<div class="md:col-span-1">
+<span class="text-xl font-bold text-white mb-4 block font-serif tracking-wide leading-relaxed" style="">Scott's Landscaping</span>
+<p class="text-stone-100 dark:text-stone-300 font-serif text-sm tracking-wide leading-relaxed mt-4" style="">
+                    © 2026 Scott's Landscaping LLC. Louisville Proud.
+                </p>
+</div>
+<!-- Links -->
+<div class="md:col-span-2 grid grid-cols-2 gap-8">
+<div class="flex flex-col space-y-3">
+<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed inline-block w-fit" href="../home_page/code.html">Home</a>
+<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed inline-block w-fit" href="../about_us/code.html">About Us</a>
+<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed inline-block w-fit" href="../services_page_pixel_perfect_replica/code.html">Services</a>
+</div>
+<div class="flex flex-col space-y-3">
+
+<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed inline-block w-fit" href="../reviews/code.html">Reviews</a>
+<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed inline-block w-fit" href="#" style="">Contact</a>
+</div>
+</div>
+<!-- Contact Info (Implicitly requested by general footer patterns) -->
+<div class="md:col-span-1 flex flex-col space-y-4 text-stone-400 font-serif text-sm tracking-wide leading-relaxed">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined" style='font-variation-settings: "FILL" 0;'>call</span>
+<span class="" style="">(502) 555-0198</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined" style='font-variation-settings: "FILL" 0;'>mail</span>
+<span class="" style="">hello@scottslandscaping.com</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined" style='font-variation-settings: "FILL" 0;'>location_on</span>
+<span class="" style="">Louisville, KY</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
