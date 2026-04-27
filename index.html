@@ -3,6 +3,7 @@
 <html class="light" lang="en"><head><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;display=swap" rel="stylesheet"/>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link rel="icon" type="image/x-icon" href="images/favicon.ico"/>
 <title>Home - Scott's Landscaping</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&amp;family=Noto+Serif:wght@700&amp;display=swap" rel="stylesheet"/>
@@ -76,20 +77,20 @@ tailwind.config = {
 <!-- TopAppBar -->
 <nav class="bg-white/95 dark:bg-stone-950/95 backdrop-blur-sm sticky top-0 w-full z-50 border-b border-[#C49A6C]/30 dark:border-stone-800 flat no shadows">
 <div class="flex justify-between items-center max-w-[1200px] mx-auto px-6 h-24">
-<a class="text-2xl font-bold text-[#2D4A2F] dark:text-[#8FB28A] tracking-tighter" href="../home_page/code.html">Scott's Landscaping</a>
+<a class="text-2xl font-bold text-[#2D4A2F] dark:text-[#8FB28A] tracking-tighter flex items-center gap-2" href="index.html"><img src="images/favicon.ico" alt="Scott's Landscaping Logo" class="w-8 h-8"/>Scott's Landscaping</a>
 <div class="hidden md:flex space-x-8 items-center">
-<a aria-current="page" class="text-[#2D4A2F] dark:text-[#8FB28A] font-['Playfair_Display',_serif] text-xl tracking-tight relative group px-1 py-1" href="../home_page/code.html">
+<a aria-current="page" class="text-[#2D4A2F] dark:text-[#8FB28A] font-['Playfair_Display',_serif] text-xl tracking-tight relative group px-1 py-1" href="index.html">
     Home
     <span class="absolute bottom-0 left-0 w-full h-[2px] bg-[#2D4A2F] dark:bg-[#8FB28A]"></span>
 </a>
-<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors font-serif text-lg tracking-tight hover:bg-[#8FB28A]/10 transition-all duration-300 px-3 py-2 rounded-md" href="../about_us/code.html">About Us</a>
-<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors font-serif text-lg tracking-tight hover:bg-[#8FB28A]/10 transition-all duration-300 px-3 py-2 rounded-md" href="../services_page_pixel_perfect_replica/code.html">Services</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors font-serif text-lg tracking-tight hover:bg-[#8FB28A]/10 transition-all duration-300 px-3 py-2 rounded-md" href="about_us.html">About Us</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors font-serif text-lg tracking-tight hover:bg-[#8FB28A]/10 transition-all duration-300 px-3 py-2 rounded-md" href="services.html">Services</a>
 
-<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors font-serif text-lg tracking-tight hover:bg-[#8FB28A]/10 transition-all duration-300 px-3 py-2 rounded-md" href="../reviews/code.html">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors font-serif text-lg tracking-tight hover:bg-[#8FB28A]/10 transition-all duration-300 px-3 py-2 rounded-md" href="reviews.html">
     Reviews
 </a>
 </div>
-<a class="hidden md:inline-flex items-center justify-center px-6 py-3 bg-primary text-on-primary font-label text-label uppercase tracking-widest hover:bg-surface-tint transition-colors duration-300 rounded" href="../free_estimate_form/code.html">Free Estimate</a>
+<a class="hidden md:inline-flex items-center justify-center px-6 py-3 bg-primary text-on-primary font-label text-label uppercase tracking-widest hover:bg-surface-tint transition-colors duration-300 rounded" href="contact_us.html">Free Quote</a>
 <!-- Mobile menu button (visual only) -->
 <button class="md:hidden text-primary p-2" style="">
 <span class="material-symbols-outlined" style='font-variation-settings: "FILL" 0;'>menu</span>
@@ -99,7 +100,7 @@ tailwind.config = {
 <main>
 <!-- Hero Section -->
 <section class="relative min-h-[870px] flex items-center justify-center overflow-hidden">
-<img alt="lush garden with warm lighting" class="absolute inset-0 w-full h-full object-cover object-center z-0" data-alt="A freshly landscaped residential front yard featuring dark mulch, young green shrubs, a decorative stone pathway, an angel statue, and a classic metal bench, representing Scott's hands-on craftsmanship." src="https://lh3.googleusercontent.com/aida/ADBb0uhmdSp8JkfpPuUGBPu0tGftcj6gXXZ8_uLSPaXvJZyb5WHZwIK6qaAbQLx_HgQaNwR8516Gi603ykRah8PK7ZEHrRPMIuvwclEvCXDiVKVGuHPkCgoVDvJzgnUdf1V06HO3Qhi4l5QclutZBVL3jTab6LF0zoXscY1CMxLYCa_06lZJ28yj98qLVgpeTsDYBYzFW9arehry4xJnCv3qv2BNrwv3QVh6bVNuyW8KpTazBEOTZL0yQVsN0u7yu-KrDeTx1bYvRO9NbQ"/>
+<img alt="lush garden with warm lighting" class="absolute inset-0 w-full h-full object-cover object-center z-0" data-alt="A freshly landscaped residential front yard featuring dark mulch, young green shrubs, a decorative stone pathway, an angel statue, and a classic metal bench, representing Scott's hands-on craftsmanship." src="images/homepage.png"/>
 <div class="absolute inset-0 bg-white/60 z-10"></div>
 <div class="relative z-20 max-w-[1200px] mx-auto px-6 w-full text-center">
 <div class="max-w-4xl mx-auto space-y-stack-lg">
@@ -110,10 +111,10 @@ tailwind.config = {
                         I design every project myself, select every plant by hand, and stay on site until the job is done right.
                     </p>
 <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-stack-md">
-<a class="bg-primary text-white px-8 py-4 rounded font-medium hover:bg-surface-tint transition-colors w-full sm:w-auto text-center focus-within:ring-1 focus-within:ring-surface-tint" href="#">
-                            Get a Free Estimate
+<a class="bg-primary text-white px-8 py-4 rounded font-medium hover:bg-surface-tint transition-colors w-full sm:w-auto text-center focus-within:ring-1 focus-within:ring-surface-tint" href="contact_us.html">
+                            Get a Free Quote
                         </a>
-<a class="bg-secondary text-white px-8 py-4 rounded font-medium hover:bg-secondary-container hover:text-on-secondary-container transition-colors w-full sm:w-auto text-center flex items-center justify-center gap-2 focus-within:ring-1 focus-within:ring-surface-tint" href="#">
+<a class="bg-secondary text-white px-8 py-4 rounded font-medium hover:bg-secondary-container hover:text-on-secondary-container transition-colors w-full sm:w-auto text-center flex items-center justify-center gap-2 focus-within:ring-1 focus-within:ring-surface-tint" href="#selected-works">
                             See my work 
                             <span class="material-symbols-outlined" style="font-size: 20px;">arrow_forward</span>
 </a>
@@ -150,7 +151,13 @@ tailwind.config = {
 <div class="max-w-[1200px] mx-auto px-6">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 <div class="relative h-[600px] rounded-lg overflow-hidden border border-outline-variant/30">
-<img alt="Scott working on site" class="absolute inset-0 w-full h-full object-cover object-center" data-alt="middle-aged male landscaper in professional workwear reviewing blueprints in a sunlit garden, surrounded by lush greenery, serious and dedicated expression, high quality portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDl9SQ725IkAa-20ZPwU7XEtOhmiQLSKvRSMt-ncie6IOr6x1B7BzNSs1aMo0GVnLINJwnqTsdKZB1RlQxftq3YQE6ddl_P3dfW5vYsV1DG2nI5ABCa5tGnrbckU4ePTFYUHDBH0-_S5khh8VG6WYq6AxOJZEdUvZIwqF02etBS9ZnK-UsTH49oEj1XwaCa5UC7sqpSkU2YDVwXnT1iv28vy-CEM1XCjzGK69q72OxW7bYFOxv90J_P8wJFaEdKELpnGJmW7Hk7ggA"/>
+    <iframe
+        class="absolute inset-0 w-full h-full border-0"
+        src="https://www.google.com/maps?q=503%20Willowhurst%20Pl%2C%20Louisville%2C%20KY%2040223%2C%20United%20States&z=15&output=embed"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
 </div>
 <div class="space-y-stack-lg">
 <h2 class="font-h2 text-h2 text-primary">Craftsmanship rooted in Louisville soil.</h2>
@@ -164,7 +171,7 @@ tailwind.config = {
 </div>
 <div class="pt-stack-md">
 <p class="font-serif text-3xl italic text-primary mb-6">Scott</p>
-<a class="text-primary font-medium hover:text-surface-tint transition-colors flex items-center gap-2 focus-within:ring-1 focus-within:ring-surface-tint rounded p-1 inline-flex" href="{{DATA:SCREEN:SCREEN_8}}">
+<a class="text-primary font-medium hover:text-surface-tint transition-colors flex items-center gap-2 focus-within:ring-1 focus-within:ring-surface-tint rounded p-1 inline-flex" href="about_us.html">
                                 Read my full story 
                                 <span class="material-symbols-outlined" style="font-size: 20px;">arrow_forward</span>
 </a>
@@ -215,73 +222,41 @@ tailwind.config = {
 </div>
 </section>
 <!-- Portfolio Preview -->
-<section class="bg-surface-container-lowest py-section-v-padding-lg">
+<section class="bg-surface-container-lowest py-section-v-padding-lg" id="selected-works">
 <div class="max-w-[1200px] mx-auto px-6">
 <div class="flex justify-between items-end mb-12">
 <div class="space-y-4">
 <h2 class="font-h2 text-h2 text-primary">Selected Works</h2>
 <p class="text-on-surface-variant font-body-md text-lg">25 years of transforming Louisville outdoor spaces.</p>
 </div>
-<a class="hidden md:flex text-primary font-medium hover:text-surface-tint transition-colors items-center gap-2 focus-within:ring-1 focus-within:ring-surface-tint rounded p-1" href="#">
-                        View all projects 
-                        <span class="material-symbols-outlined" style="font-size: 20px;">arrow_forward</span>
-</a>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 <!-- Project 1 -->
 <div class="relative group rounded-xl overflow-hidden aspect-[4/3] border border-outline-variant/30">
-<img alt="Modern patio" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="sleek modern bluestone patio with minimalist geometric plantings, elegant outdoor furniture, warm sunset lighting, high-end residential landscape design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClp3qD8p3zfI32xY8ngnxbjI7TkN0fVJt3cCDGlIlT7IKcb0XbAhUlhgHGhr5vacizrynGoooe7grut-0BwBELJ6WWKYfZxlVfCWmtVtmNP53RPviL2vKc718XmyumDukZ8FQZHBJj0KXQnhGsecKqQB-b7W8B9Unf_j6ersSvKM6euqh8sZ5y0D0mQra0fhg908cyleRi-5TU79WlKVG7mqpOOcoVVNpbjSNUOaw_3AQnXwUImYpJLkGTqZHJx_PcrCu4BcWft3g"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-<p class="text-white font-medium text-lg">Bluestone Terrace</p>
-<p class="text-fern text-sm">Cherokee Triangle</p>
-</div>
+<img alt="Project 1" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="images/image1.jpg"/>
 </div>
 <!-- Project 2 -->
 <div class="relative group rounded-xl overflow-hidden aspect-[4/3] border border-outline-variant/30">
-<img alt="Traditional estate garden" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="classic formal estate garden with manicured boxwood hedges, brick pathways, lush green lawns, elegant stone fountain, bright sunny day" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKTtDbVRUyimnNmUqcj-9BvdQuGET40_75rZcm0ZdraYEjwyC4m4QLA1W23qGGtRIi9OpAq1jXxWQaB3DV8xSaP6DXAM0bY_7WFceEoAl6tGpEa5c0x_0g712f3eqZuLsxq_A9CNKjlE4q6zkGJGuXYGdAkPwJVydhYxUmnChNhoHjbDIckOprUAaiS8ucZqNqRpAo5uqTVZddrZSxpLGwLPkpvDs5uy8Nduv8nJljqfh2ZkwDIw8I72GfMkHxPzSkIt6iUROrVPA"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-<p class="text-white font-medium text-lg">Formal Boxwood Garden</p>
-<p class="text-fern text-sm">Anchorage</p>
-</div>
+<img alt="Project 2" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="images/image2.jpg"/>
 </div>
 <!-- Project 3 -->
 <div class="relative group rounded-xl overflow-hidden aspect-[4/3] border border-outline-variant/30">
-<img alt="Night lighting" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="dramatic evening landscape lighting highlighting large oak trees and stone retaining walls, warm inviting glow, high end estate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZsi2SAk95ANOnO115XF8h9-TvjgOgS96hugzVh6df8eSW8zRCkGbX3seQ37ex4sTQPAZn3Df889umx2XNTa3TV2bUOGgRPna4iA8YxNeinV3DhQhRXgKooAe0xcGSxNsNAu44JS1i1og_ebtA4WR6b2S8p-d6gZrO9AE-pSeeEp8MrVutYpCeuEovuPhOkgr0e5rMGyoVuMwyf6k9P1DZgRfpdgtQJGjsdfZmO4-BB76nyFvwVdnj2Oe21fguAQvTSCiG3DelUXQ"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-<p class="text-white font-medium text-lg">Architectural Illumination</p>
-<p class="text-fern text-sm">Indian Hills</p>
-</div>
+<img alt="Project 3" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="images/image3.jpg"/>
 </div>
 <!-- Project 4 -->
 <div class="relative group rounded-xl overflow-hidden aspect-[4/3] border border-outline-variant/30">
-<img alt="Water feature" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="serene natural stone water feature cascading into a small koi pond surrounded by lush ferns and hostas, dappled sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADhv8nn8PJ0OgErPWOuq1MlR0mZAkAhGUvLjeLCrucFb9CV6QP_6aFMaE4oenaLajQVhMvF4GkCrVAR5ME63Ov2nSkpul6yAcjfF7drpXssRpDY8FL1OoS55kOvEBJF8vM2rqlf4vrmeCk8IsW1LlQN7bq5a16x3-I_a5qyNwdr-JgjhlptPq9XtYfCJMNrOuMapCBlsQpCCUSvqY4NZmrIK-xyK7MR_J0kBarS-yilfsv8yogP3XSGuwjGpL0KnJC6H1FLqgRxDA"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-<p class="text-white font-medium text-lg">Woodland Water Garden</p>
-<p class="text-fern text-sm">Mockingbird Valley</p>
-</div>
+<img alt="Project 4" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="images/image4.jpg"/>
 </div>
 <!-- Project 5 -->
 <div class="relative group rounded-xl overflow-hidden aspect-[4/3] border border-outline-variant/30">
-<img alt="Outdoor kitchen" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="luxurious outdoor kitchen area built with natural stone, stainless steel appliances, cedar pergola overhead, ready for entertaining" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc37HTszghQnPn0YNeG9uBHpE0NkeqSLB3iOluoq2_4dJid-G4ItITi4Kv0bvh58eWhGzWFgLgVPIigDBSr5VTacfHggd_bzsI8BOJDQ1p7ZaAbhlfEEyzcgXYiGB7DogLs8o3nAPCVdU8kXrs2S9jiKJUCRGn_kEFSCDxxkcWXvN8RSmQk8wEC2qRpyzxEW3vF3kthXDEXjJtEdTJGFXyWoTZ1sD7FUwZ7d2dZ6KIyKoW3u-YiImj-_n9YkQ5PQwfCXnrJ_79MAI"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-<p class="text-white font-medium text-lg">Entertainer's Oasis</p>
-<p class="text-fern text-sm">Glenview</p>
-</div>
+<img alt="Project 5" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="images/image5.jpg"/>
 </div>
 <!-- Project 6 -->
 <div class="relative group rounded-xl overflow-hidden aspect-[4/3] border border-outline-variant/30">
-<img alt="Fire pit area" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="cozy circular flagstone patio with a central natural gas fire pit surrounded by Adirondack chairs, dusk lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChij8SLKJ9e-fHqUNLLre8ou_ikafA5zqwNuV3lKFiqimIr9L-oizBWvZSKP7VEpxQREe8Y5rgOe5J_8m-DowFiFzhj-1NknpJ_RfNnXjvzPCgU_XsmCl4Xpj8eyOOkWImImeuh7_-BcwMSPNCi9NB52oWX3uBVyK9sI7fD7q91nC6GyLX0-SzWqXMdYgOlJ8rij4nMNWF3LJN8iCoF7ZaJJn7xPomhnWGW63j4SBQI3k2dBkDOLk-bFI48-pQESUNZGG1A3aqYSY"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-<p class="text-white font-medium text-lg">Gathering Space</p>
-<p class="text-fern text-sm">Norton Commons</p>
-</div>
+<img alt="Project 6" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="images/image6.jpg"/>
 </div>
 </div>
 <div class="mt-8 text-center md:hidden">
-<a class="text-primary font-medium hover:text-surface-tint transition-colors inline-flex items-center gap-2 focus-within:ring-1 focus-within:ring-surface-tint rounded p-1" href="#">
-                        View all projects 
-                        <span class="material-symbols-outlined" style="font-size: 20px;">arrow_forward</span>
-</a>
 </div>
 </div>
 </section>
@@ -342,8 +317,8 @@ tailwind.config = {
                     Let's discuss your vision and see how we can bring it to life with our expert craftsmanship.
                 </p>
 <div class="flex flex-col sm:flex-row justify-center gap-4">
-<a class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-label text-label uppercase tracking-widest hover:bg-surface-container transition-colors duration-300 rounded" href="#" style="">
-                        Request a Free Estimate
+<a class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-label text-label uppercase tracking-widest hover:bg-surface-container transition-colors duration-300 rounded" href="contact_us.html" style="">
+                        Request a Free Quote
                     </a>
 </div>
 </div>
@@ -362,21 +337,21 @@ tailwind.config = {
 <!-- Links -->
 <div class="md:col-span-2 grid grid-cols-2 gap-8">
 <div class="flex flex-col space-y-3">
-<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed inline-block w-fit" href="../home_page/code.html">Home</a>
-<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed inline-block w-fit" href="../about_us/code.html">About Us</a>
-<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed inline-block w-fit" href="../services_page_pixel_perfect_replica/code.html">Services</a>
+<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed inline-block w-fit" href="index.html">Home</a>
+<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed inline-block w-fit" href="about_us.html">About Us</a>
+<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed inline-block w-fit" href="services.html">Services</a>
 </div>
 <div class="flex flex-col space-y-3">
 
-<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed inline-block w-fit" href="../reviews/code.html">Reviews</a>
-<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed inline-block w-fit" href="#" style="">Contact</a>
+<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed inline-block w-fit" href="reviews.html">Reviews</a>
+<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed inline-block w-fit" href="contact_us.html" style="">Contact</a>
 </div>
 </div>
 <!-- Contact Info (Implicitly requested by general footer patterns) -->
 <div class="md:col-span-1 flex flex-col space-y-4 text-stone-400 font-serif text-sm tracking-wide leading-relaxed">
 <div class="flex items-center gap-2">
 <span class="material-symbols-outlined" style='font-variation-settings: "FILL" 0;'>call</span>
-<span class="" style="">(502) 555-0198</span>
+<span class="" style="">+1 (502) 821-4542</span>
 </div>
 <div class="flex items-center gap-2">
 <span class="material-symbols-outlined" style='font-variation-settings: "FILL" 0;'>mail</span>
@@ -390,19 +365,3 @@ tailwind.config = {
 </div>
 </footer>
 </body></html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
