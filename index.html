@@ -90,7 +90,13 @@ tailwind.config = {
     Reviews
 </a>
 </div>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors font-serif text-lg tracking-tight flex items-center gap-2" href="tel:+15028214542">
+<span class="material-symbols-outlined" style='font-variation-settings: "FILL" 0;'>call</span>
++1 (502) 821-4542
+</a>
 <a class="hidden md:inline-flex items-center justify-center px-6 py-3 bg-primary text-on-primary font-label text-label uppercase tracking-widest hover:bg-surface-tint transition-colors duration-300 rounded" href="contact_us.html">Free Quote</a>
+</div>
 <!-- Mobile menu button (visual only) -->
 <button class="md:hidden text-primary p-2" style="">
 <span class="material-symbols-outlined" style='font-variation-settings: "FILL" 0;'>menu</span>
@@ -230,36 +236,94 @@ tailwind.config = {
 <p class="text-on-surface-variant font-body-md text-lg">25 years of transforming Louisville outdoor spaces.</p>
 </div>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-<!-- Project 1 -->
-<div class="relative group rounded-xl overflow-hidden aspect-[4/3] border border-outline-variant/30">
-<img alt="Project 1" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="images/image1.jpg"/>
-</div>
-<!-- Project 2 -->
-<div class="relative group rounded-xl overflow-hidden aspect-[4/3] border border-outline-variant/30">
-<img alt="Project 2" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="images/image2.jpg"/>
-</div>
-<!-- Project 3 -->
-<div class="relative group rounded-xl overflow-hidden aspect-[4/3] border border-outline-variant/30">
-<img alt="Project 3" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="images/image3.jpg"/>
-</div>
-<!-- Project 4 -->
-<div class="relative group rounded-xl overflow-hidden aspect-[4/3] border border-outline-variant/30">
-<img alt="Project 4" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="images/image4.jpg"/>
-</div>
-<!-- Project 5 -->
-<div class="relative group rounded-xl overflow-hidden aspect-[4/3] border border-outline-variant/30">
-<img alt="Project 5" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="images/image5.jpg"/>
-</div>
-<!-- Project 6 -->
-<div class="relative group rounded-xl overflow-hidden aspect-[4/3] border border-outline-variant/30">
-<img alt="Project 6" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="images/image6.jpg"/>
-</div>
-</div>
-<div class="mt-8 text-center md:hidden">
+
+<style>
+.portfolio-carousel { overflow: hidden; }
+.portfolio-track { display: flex; gap: 1.5rem; align-items: center; will-change: transform; }
+.portfolio-track:hover { --paused: 1; }
+.portfolio-item { flex: 0 0 auto; width: 350px; aspect-ratio: 4/3; }
+.portfolio-item img { width: 100%; height: 100%; object-fit: cover; border-radius: 0.75rem; border: 1px solid rgba(202, 199, 208, 0.3); display: block; transition: transform 0.3s ease; }
+.portfolio-item:hover img { transform: scale(1.05); }
+</style>
+
+<div class="portfolio-carousel">
+<div id="portfolioTrack" class="portfolio-track"></div>
 </div>
 </div>
 </section>
+
+<script>
+(function () {
+  const order = ['slide1','image2','slide2','image3','slide3','image4','slide4','image5','slide5','image6'];
+  const track = document.getElementById('portfolioTrack');
+  const container = track.parentElement;
+  
+  const makeItems = (arr) => arr.map(name => {
+    const ext = name.startsWith('slide') ? '.jpeg' : '.jpg';
+    return `<div class="portfolio-item"><img src="images/${name}${ext}" alt="${name}" loading="eager"/></div>`;
+  }).join('');
+  
+  const originalHTML = makeItems(order);
+  track.innerHTML = originalHTML;
+
+  function initScroll() {
+    // Calcola la larghezza del contenuto originale
+    const originalWidth = track.scrollWidth;
+    
+    // Duplica il contenuto almeno 2 volte (abbiamo 3 copie totali)
+    track.innerHTML = originalHTML + originalHTML + originalHTML;
+    
+    let scrollPos = 0;
+    let isPaused = false;
+    const speed = 0.8; // pixel per frame
+
+    function animate() {
+      if (!isPaused) {
+        scrollPos += speed;
+        
+        // Quando raggiungiamo la fine della prima copia, resetta senza interruzione
+        if (scrollPos >= originalWidth) {
+          scrollPos = 0;
+        }
+      }
+      
+      track.style.transform = `translateX(-${scrollPos}px)`;
+      requestAnimationFrame(animate);
+    }
+
+    // Avvia l'animazione
+    animate();
+
+    // Pausa al hover
+    track.addEventListener('mouseenter', () => {
+      isPaused = true;
+    });
+    track.addEventListener('mouseleave', () => {
+      isPaused = false;
+    });
+
+    // Adatta se la finestra cambia
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        scrollPos = 0;
+        initScroll();
+      }, 200);
+    });
+  }
+
+  // Attendi il caricamento immagini, poi avvia
+  const imgs = Array.from(track.querySelectorAll('img'));
+  Promise.allSettled(imgs.map(img => new Promise(res => {
+    if (img.complete) return res();
+    img.addEventListener('load', res, { once: true });
+    img.addEventListener('error', res, { once: true });
+  }))).then(() => {
+    setTimeout(initScroll, 100);
+  });
+})();
+</script>
 <!-- Reviews -->
 <section class="bg-fern py-section-v-padding-lg">
 <div class="max-w-[1200px] mx-auto px-6">
