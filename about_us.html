@@ -76,8 +76,8 @@ tailwind.config = {
 <body class="bg-background text-on-background font-body-md min-h-screen flex flex-col antialiased">
 <!-- TopAppBar -->
 <nav class="bg-white/95 dark:bg-stone-950/95 backdrop-blur-sm sticky top-0 w-full z-50 border-b border-[#C49A6C]/30 dark:border-stone-800 flat no shadows">
-<div class="flex justify-between items-center max-w-[1200px] mx-auto px-6 h-24">
-<a class="text-2xl font-bold text-[#2D4A2F] dark:text-[#8FB28A] tracking-tighter flex items-center gap-2" href="index.html"><img src="images/favicon.ico" alt="Scott's Landscaping Logo" class="w-8 h-8"/>Scott's Landscaping</a>
+<div class="flex justify-between items-center max-w-[1200px] mx-auto px-6 h-16 md:h-24">
+<a class="text-xl md:text-2xl font-bold text-[#2D4A2F] dark:text-[#8FB28A] tracking-tighter flex items-center gap-2" href="index.html"><img src="images/favicon.ico" alt="Scott's Landscaping Logo" class="w-7 h-7 md:w-8 md:h-8"/>Scott's Landscaping</a>
 <div class="hidden md:flex space-x-8 items-center">
 <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors font-serif text-lg tracking-tight hover:bg-[#8FB28A]/10 transition-all duration-300 px-3 py-2 rounded-md" href="index.html">Home</a>
 <a aria-current="page" class="text-[#2D4A2F] dark:text-[#8FB28A] font-['Playfair_Display',_serif] text-xl tracking-tight relative group px-1 py-1" href="about_us.html">
@@ -97,24 +97,40 @@ tailwind.config = {
 </a>
 <a class="hidden md:inline-flex items-center justify-center px-6 py-3 bg-primary text-on-primary font-label text-label uppercase tracking-widest hover:bg-surface-tint transition-colors duration-300 rounded" href="contact_us.html">Free Quote</a>
 </div>
-<!-- Mobile menu button (visual only) -->
-<button class="md:hidden text-primary p-2" style="">
+<!-- Mobile menu button -->
+<button id="mobileMenuButton" class="md:hidden text-primary p-2" type="button" aria-controls="mobileMenu" aria-expanded="false">
 <span class="material-symbols-outlined" style='font-variation-settings: "FILL" 0;'>menu</span>
 </button>
 </div>
 </nav>
+<div id="mobileMenu" class="md:hidden hidden fixed top-16 left-0 right-0 w-full z-40 bg-white/95 dark:bg-stone-950/95 border-b border-[#C49A6C]/30 dark:border-stone-800 max-h-[calc(100vh-64px)] overflow-y-auto">
+<div class="max-w-[1200px] mx-auto px-6 py-4 space-y-2">
+<a class="block px-3 py-2 rounded-md text-on-surface-variant font-serif text-lg hover:bg-[#8FB28A]/10 transition-colors" href="index.html">Home</a>
+<a aria-current="page" class="block px-3 py-2 rounded-md text-primary font-serif text-lg" href="about_us.html">About Us</a>
+<a class="block px-3 py-2 rounded-md text-on-surface-variant font-serif text-lg hover:bg-[#8FB28A]/10 transition-colors" href="services.html">Services</a>
+<a class="block px-3 py-2 rounded-md text-on-surface-variant font-serif text-lg hover:bg-[#8FB28A]/10 transition-colors" href="reviews.html">Reviews</a>
+<a class="block px-3 py-2 rounded-md text-on-surface-variant font-serif text-lg hover:bg-[#8FB28A]/10 transition-colors" href="contact_us.html">Contact</a>
+<div class="pt-3 mt-3 border-t border-outline-variant/30 space-y-2">
+<a class="flex items-center gap-2 px-3 py-2 rounded-md text-on-surface-variant font-serif text-lg" href="tel:+15028214542">
+<span class="material-symbols-outlined" style='font-variation-settings: "FILL" 0;'>call</span>
++1 (502) 821-4542
+</a>
+<a class="inline-flex items-center justify-center w-full px-6 py-3 bg-primary text-on-primary font-label text-label uppercase tracking-widest hover:bg-surface-tint transition-colors rounded" href="contact_us.html">Free Quote</a>
+</div>
+</div>
+</div>
 <main class="flex-grow">
 <!-- Hero Section -->
-<section class="relative py-section-v-padding-lg bg-surface-container-lowest overflow-hidden">
+<section class="relative py-section-v-padding-lg bg-surface-container overflow-hidden">
 <div class="absolute inset-0 z-0 opacity-0">
 <img alt="Mist background" class="w-full h-full object-cover" data-alt="Soft morning mist rolling over a lush green landscape with subtle silhouettes of trees in the background, creating a serene and atmospheric mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuArNysxPHM6VCoAsmBYQwizhqLJHBjG6JiCYjjbKrn5QY0JmX8s-h9CL2S5SPcog3EY4utgLWfPPIl1xvLC9AEW9WQY1ny8NXN0epkCrYVmd5_0wwJD3UnMOlTKSYf5OC9m9PKbvFSdQxUZATEZQkoSiWTBBH_OAUGli6y7z0KR2DqzbhWr_TuMCl0vhsAm7eUx4B5OTsJGMKyyAsY-tXCcT3bRj7XYu5WPQmNZiByJpzKNRvqt-zyAqEfZVU7UFvbql7oSzuUJ6fs"/>
 </div>
 <div class="relative z-10 max-w-[1200px] mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
 <div class="col-span-1 md:col-span-6 space-y-stack-lg">
-<h1 class="font-h1 text-h1 text-primary">A Louisville native who's been getting his hands dirty since 1999.</h1>
+<h1 class="font-h1 text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-primary leading-tight tracking-tight">Louisville native who's been getting his hands dirty since 1999.</h1>
 </div>
 <div class="col-span-1 md:col-span-6">
-<img alt="Angie's List Award" class="w-full h-80 object-contain rounded-xl" src="images/angie-award.png"/>
+<img alt="Angie's List Award" class="w-full h-56 sm:h-64 md:h-80 object-contain rounded-xl" src="images/angie-award.png"/>
 </div>
 </div>
 </section>
@@ -234,14 +250,14 @@ tailwind.config = {
 <!-- Links -->
 <div class="md:col-span-2 grid grid-cols-2 gap-8">
 <div class="flex flex-col space-y-3">
-<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed inline-block w-fit" href="index.html">Home</a>
-<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed inline-block w-fit" href="about_us.html">About Us</a>
-<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed inline-block w-fit" href="services.html">Services</a>
+<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed block w-fit py-2" href="index.html">Home</a>
+<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed block w-fit py-2" href="about_us.html">About Us</a>
+<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed block w-fit py-2" href="services.html">Services</a>
 </div>
 <div class="flex flex-col space-y-3">
 
-<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed inline-block w-fit" href="reviews.html">Reviews</a>
-<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed inline-block w-fit" href="contact_us.html" style="">Contact</a>
+<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed block w-fit py-2" href="reviews.html">Reviews</a>
+<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed block w-fit py-2" href="contact_us.html" style="">Contact</a>
 </div>
 </div>
 <!-- Contact Info (Implicitly requested by general footer patterns) -->
@@ -261,4 +277,24 @@ tailwind.config = {
 </div>
 </div>
 </footer>
+<script>
+(() => {
+    const button = document.getElementById('mobileMenuButton');
+    const menu = document.getElementById('mobileMenu');
+    if (!button || !menu) return;
+
+    button.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+        const isOpen = !menu.classList.contains('hidden');
+        button.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    menu.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+            menu.classList.add('hidden');
+            button.setAttribute('aria-expanded', 'false');
+        });
+    });
+})();
+</script>
 </body></html>

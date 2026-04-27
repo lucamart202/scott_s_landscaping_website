@@ -76,8 +76,8 @@ tailwind.config = {
 <body class="bg-surface text-on-surface font-body-md min-h-screen flex flex-col antialiased">
 <!-- TopAppBar -->
 <nav class="bg-white/95 dark:bg-stone-950/95 backdrop-blur-sm sticky top-0 w-full z-50 border-b border-[#C49A6C]/30 dark:border-stone-800 flat no shadows">
-<div class="flex justify-between items-center max-w-[1200px] mx-auto px-6 h-24">
-<a class="text-2xl font-bold text-[#2D4A2F] dark:text-[#8FB28A] tracking-tighter flex items-center gap-2" href="index.html"><img src="images/favicon.ico" alt="Scott's Landscaping Logo" class="w-8 h-8"/>Scott's Landscaping</a>
+<div class="flex justify-between items-center max-w-[1200px] mx-auto px-6 h-16 md:h-24">
+<a class="text-xl md:text-2xl font-bold text-[#2D4A2F] dark:text-[#8FB28A] tracking-tighter flex items-center gap-2" href="index.html"><img src="images/favicon.ico" alt="Scott's Landscaping Logo" class="w-7 h-7 md:w-8 md:h-8"/>Scott's Landscaping</a>
 <div class="hidden md:flex space-x-8 items-center">
 <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors font-serif text-lg tracking-tight hover:bg-[#8FB28A]/10 transition-all duration-300 px-3 py-2 rounded-md" href="index.html">Home</a>
 <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors font-serif text-lg tracking-tight hover:bg-[#8FB28A]/10 transition-all duration-300 px-3 py-2 rounded-md" href="about_us.html">About Us</a>
@@ -94,43 +94,54 @@ tailwind.config = {
 </a>
 <a class="hidden md:inline-flex items-center justify-center px-6 py-3 bg-primary text-on-primary font-label text-label uppercase tracking-widest hover:bg-surface-tint transition-colors duration-300 rounded" href="contact_us.html">Free Quote</a>
 </div>
-<!-- Mobile menu button (visual only) -->
-<button class="md:hidden text-primary p-2" style="">
+<!-- Mobile menu button -->
+<button id="mobileMenuButton" class="md:hidden text-primary p-2" type="button" aria-controls="mobileMenu" aria-expanded="false">
 <span class="material-symbols-outlined" style='font-variation-settings: "FILL" 0;'>menu</span>
 </button>
 </div>
 </nav>
+<div id="mobileMenu" class="md:hidden hidden fixed top-16 left-0 right-0 w-full z-40 bg-white/95 dark:bg-stone-950/95 border-b border-[#C49A6C]/30 dark:border-stone-800 max-h-[calc(100vh-64px)] overflow-y-auto">
+<div class="max-w-[1200px] mx-auto px-6 py-4 space-y-2">
+<a class="block px-3 py-2 rounded-md text-on-surface-variant font-serif text-lg hover:bg-[#8FB28A]/10 transition-colors" href="index.html">Home</a>
+<a class="block px-3 py-2 rounded-md text-on-surface-variant font-serif text-lg hover:bg-[#8FB28A]/10 transition-colors" href="about_us.html">About Us</a>
+<a class="block px-3 py-2 rounded-md text-on-surface-variant font-serif text-lg hover:bg-[#8FB28A]/10 transition-colors" href="services.html">Services</a>
+<a class="block px-3 py-2 rounded-md text-on-surface-variant font-serif text-lg hover:bg-[#8FB28A]/10 transition-colors" href="reviews.html">Reviews</a>
+<a aria-current="page" class="block px-3 py-2 rounded-md text-primary font-serif text-lg" href="contact_us.html">Contact</a>
+<div class="pt-3 mt-3 border-t border-outline-variant/30 space-y-2">
+<a class="flex items-center gap-2 px-3 py-2 rounded-md text-on-surface-variant font-serif text-lg" href="tel:+15028214542">
+<span class="material-symbols-outlined" style='font-variation-settings: "FILL" 0;'>call</span>
++1 (502) 821-4542
+</a>
+<a class="inline-flex items-center justify-center w-full px-6 py-3 bg-primary text-on-primary font-label text-label uppercase tracking-widest hover:bg-surface-tint transition-colors rounded" href="contact_us.html">Free Quote</a>
+</div>
+</div>
+</div>
 <!-- Main Content -->
 <main class="flex-grow py-section-v-padding-sm lg:py-section-v-padding-lg px-6">
 <div class="max-w-[1000px] mx-auto flex flex-col lg:flex-row gap-12 lg:gap-24">
 <!-- Left Column: Form -->
 <div class="flex-1 w-full max-w-[640px] mx-auto lg:mx-0">
 <div class="mb-10">
-<h1 class="font-h1 text-h1 text-primary mb-stack-sm">Let's talk about your project.</h1>
-<p class="font-body-md text-body-md text-on-surface-variant">No pressure, no obligation — just an honest conversation.</p>
-</div>
-<!-- Personal Note -->
-<div class="flex items-center gap-4 bg-surface-container-low p-4 rounded-lg mb-8 border border-surface-variant">
-<img alt="Portrait of Scott" class="w-16 h-16 rounded-full object-cover border-2 border-surface-container-lowest shadow-sm" data-alt="Portrait of a friendly, professional middle-aged man in a casual collared shirt, outdoors with soft natural lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuByheXSP8l0LqhMWSh0xlL6VOsUCtXIGtOWIk7klyFC_9YXAwxY6A4yyWM096tYnjUTfieN1C_WS618Dw6RA07WwomuyGCgJ3dSHfRpWTB4HMzRIhq61luYOF4ImgBsxkKDNebrinbzb8Fff-tnPXZ2jKE9dZ4giPsd0uL9gfDahNXkWIzexnxNrKG_q_u8Hr1wv8ibOtsDO9vc73CpGwEtMIwnpnFiL93KojUl_C2r_5g3JPTMqlj-Qo8rNn0O_LKh30f6qAPlB2w"/>
-<p class="font-body-sm text-body-sm text-on-surface-variant italic">"I read every message myself and respond personally." <br/><span class="font-label text-label uppercase text-primary mt-1 inline-block">— Scott</span></p>
+<h1 class="font-h1 text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-primary leading-tight tracking-tight">Let's talk about your project.</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">No pressure, no obligation. Just an honest conversation.</p>
 </div>
 <!-- Form -->
 <form class="space-y-6">
 <div>
 <label class="block font-label text-label uppercase text-on-surface mb-2" for="fullName">Full Name</label>
-<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" id="fullName" name="fullName" type="text"/>
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg px-4 py-4 font-body-md text-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" id="fullName" name="fullName" type="text"/>
 </div>
 <div>
 <label class="block font-label text-label uppercase text-on-surface mb-2" for="address">Where's the project?</label>
-<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" id="address" name="address" placeholder="Louisville address or zip code" type="text"/>
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg px-4 py-4 font-body-md text-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" id="address" name="address" placeholder="Louisville address or zip code" type="text"/>
 </div>
 <div>
 <label class="block font-label text-label uppercase text-on-surface mb-2" for="phone">Phone number</label>
-<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" id="phone" name="phone" type="tel"/>
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg px-4 py-4 font-body-md text-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" id="phone" name="phone" type="tel"/>
 </div>
 <div>
 <label class="block font-label text-label uppercase text-on-surface mb-2" for="serviceType">Type of service</label>
-<select class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors appearance-none" id="serviceType" name="serviceType">
+<select class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg px-4 py-4 font-body-md text-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors appearance-none" id="serviceType" name="serviceType">
 <option value="">Select a service</option>
 <option value="design">Design</option>
 <option value="installation">Installation</option>
@@ -142,7 +153,7 @@ tailwind.config = {
 </div>
 <div>
 <label class="block font-label text-label uppercase text-on-surface mb-2" for="projectDetails">Tell me about your project</label>
-<textarea class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors resize-none" id="projectDetails" name="projectDetails" placeholder="What are you hoping to achieve?" rows="4"></textarea>
+<textarea class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg px-4 py-4 font-body-md text-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors resize-none" id="projectDetails" name="projectDetails" placeholder="What are you hoping to achieve?" rows="4"></textarea>
 </div>
 <div>
 <label class="block font-label text-label uppercase text-on-surface mb-2">Upload photos (Optional)</label>
@@ -161,9 +172,9 @@ tailwind.config = {
 </div>
 </div>
 <div class="pt-4">
-<button class="w-full bg-primary text-on-primary font-label text-label uppercase tracking-wider py-4 rounded-lg hover:bg-surface-tint transition-colors border-none shadow-none text-center" type="submit">
+<a href="thank_you.html" class="w-full bg-primary text-on-primary font-label text-label uppercase tracking-wider py-4 rounded-lg hover:bg-surface-tint transition-colors border-none shadow-none text-center block">
                             Send my request to Scott
-                        </button>
+                        </a>
 </div>
 </form>
 <!-- Trust Signals (Form Footer) -->
@@ -249,14 +260,14 @@ tailwind.config = {
 <!-- Links -->
 <div class="md:col-span-2 grid grid-cols-2 gap-8">
 <div class="flex flex-col space-y-3">
-<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed inline-block w-fit" href="index.html">Home</a>
-<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed inline-block w-fit" href="about_us.html">About Us</a>
-<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed inline-block w-fit" href="services.html">Services</a>
+<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed block w-fit py-2" href="index.html">Home</a>
+<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed block w-fit py-2" href="about_us.html">About Us</a>
+<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed block w-fit py-2" href="services.html">Services</a>
 </div>
 <div class="flex flex-col space-y-3">
 
-<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed inline-block w-fit" href="reviews.html">Reviews</a>
-<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed inline-block w-fit" href="contact_us.html" style="">Contact</a>
+<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed block w-fit py-2" href="reviews.html">Reviews</a>
+<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed block w-fit py-2" href="contact_us.html" style="">Contact</a>
 </div>
 </div>
 <!-- Contact Info (Implicitly requested by general footer patterns) -->
@@ -276,4 +287,24 @@ tailwind.config = {
 </div>
 </div>
 </footer>
+<script>
+(() => {
+    const button = document.getElementById('mobileMenuButton');
+    const menu = document.getElementById('mobileMenu');
+    if (!button || !menu) return;
+
+    button.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+        const isOpen = !menu.classList.contains('hidden');
+        button.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    menu.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+            menu.classList.add('hidden');
+            button.setAttribute('aria-expanded', 'false');
+        });
+    });
+})();
+</script>
 </body></html>

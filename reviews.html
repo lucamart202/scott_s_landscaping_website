@@ -76,8 +76,8 @@ tailwind.config = {
 <body class="bg-background text-on-background font-body-md antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
 <!-- TopAppBar -->
 <nav class="bg-white/95 dark:bg-stone-950/95 backdrop-blur-sm sticky top-0 w-full z-50 border-b border-[#C49A6C]/30 dark:border-stone-800 flat no shadows">
-<div class="flex justify-between items-center max-w-[1200px] mx-auto px-6 h-24">
-<a class="text-2xl font-bold text-[#2D4A2F] dark:text-[#8FB28A] tracking-tighter flex items-center gap-2" href="index.html"><img src="images/favicon.ico" alt="Scott's Landscaping Logo" class="w-8 h-8"/>Scott's Landscaping</a>
+<div class="flex justify-between items-center max-w-[1200px] mx-auto px-6 h-16 md:h-24">
+<a class="text-xl md:text-2xl font-bold text-[#2D4A2F] dark:text-[#8FB28A] tracking-tighter flex items-center gap-2" href="index.html"><img src="images/favicon.ico" alt="Scott's Landscaping Logo" class="w-7 h-7 md:w-8 md:h-8"/>Scott's Landscaping</a>
 <div class="hidden md:flex space-x-8 items-center">
 <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors font-serif text-lg tracking-tight hover:bg-[#8FB28A]/10 transition-all duration-300 px-3 py-2 rounded-md" href="index.html">Home</a>
 <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors font-serif text-lg tracking-tight hover:bg-[#8FB28A]/10 transition-all duration-300 px-3 py-2 rounded-md" href="about_us.html">About Us</a>
@@ -95,26 +95,32 @@ tailwind.config = {
 </a>
 <a class="hidden md:inline-flex items-center justify-center px-6 py-3 bg-primary text-on-primary font-label text-label uppercase tracking-widest hover:bg-surface-tint transition-colors duration-300 rounded" href="contact_us.html">Free Quote</a>
 </div>
-<!-- Mobile menu button (visual only) -->
-<button class="md:hidden text-primary p-2" style="">
+<!-- Mobile menu button -->
+<button id="mobileMenuButton" class="md:hidden text-primary p-2" type="button" aria-controls="mobileMenu" aria-expanded="false">
 <span class="material-symbols-outlined" style='font-variation-settings: "FILL" 0;'>menu</span>
 </button>
 </div>
 </nav>
+<div id="mobileMenu" class="md:hidden hidden fixed top-16 left-0 right-0 w-full z-40 bg-white/95 dark:bg-stone-950/95 border-b border-[#C49A6C]/30 dark:border-stone-800 max-h-[calc(100vh-64px)] overflow-y-auto">
+<div class="max-w-[1200px] mx-auto px-6 py-4 space-y-2">
+<a class="block px-3 py-2 rounded-md text-on-surface-variant font-serif text-lg hover:bg-[#8FB28A]/10 transition-colors" href="index.html">Home</a>
+<a class="block px-3 py-2 rounded-md text-on-surface-variant font-serif text-lg hover:bg-[#8FB28A]/10 transition-colors" href="about_us.html">About Us</a>
+<a class="block px-3 py-2 rounded-md text-on-surface-variant font-serif text-lg hover:bg-[#8FB28A]/10 transition-colors" href="services.html">Services</a>
+<a aria-current="page" class="block px-3 py-2 rounded-md text-primary font-serif text-lg" href="reviews.html">Reviews</a>
+<a class="block px-3 py-2 rounded-md text-on-surface-variant font-serif text-lg hover:bg-[#8FB28A]/10 transition-colors" href="contact_us.html">Contact</a>
+<div class="pt-3 mt-3 border-t border-outline-variant/30 space-y-2">
+<a class="flex items-center gap-2 px-3 py-2 rounded-md text-on-surface-variant font-serif text-lg" href="tel:+15028214542">
+<span class="material-symbols-outlined" style='font-variation-settings: "FILL" 0;'>call</span>
++1 (502) 821-4542
+</a>
+<a class="inline-flex items-center justify-center w-full px-6 py-3 bg-primary text-on-primary font-label text-label uppercase tracking-widest hover:bg-surface-tint transition-colors rounded" href="contact_us.html">Free Quote</a>
+</div>
+</div>
+</div>
 <main>
 <!-- Hero Section -->
 <section class="pt-section-v-padding-lg pb-section-v-padding-sm px-6 max-w-[1200px] mx-auto text-center">
-<div class="inline-flex items-center gap-2 mb-6 bg-surface-container py-2 px-4 rounded-full">
-<div class="flex text-[#F59E0B]">
-<span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span>
-<span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span>
-<span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span>
-<span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0; background: linear-gradient(90deg, #F59E0B 60%, #E5E7EB 60%); -webkit-background-clip: text; background-clip: text; color: transparent;">star</span>
-</div>
-<span class="font-body-md text-body-md text-on-surface-variant font-medium" style="">4.6 Google Rating (13 Reviews)</span>
-</div>
-<h1 class="font-h1 text-h1 text-primary mb-6" style="">"Don't take my word for it."</h1>
+<h1 class="font-h1 text-3xl sm:text-4xl md:text-h1 text-primary mb-6" style="">Don't take my word for it.</h1>
 <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto" style="">
                 For over a decade, we've been transforming Louisville properties. Hear directly from our clients about their experience with Scott's Landscaping.
             </p>
@@ -146,11 +152,11 @@ tailwind.config = {
 <span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span>
 </div>
 <p class="font-body-md text-body-md text-on-surface mb-6 flex-grow" style="">
-                        "Scott and his team completely transformed our backyard. From the initial consultation to the final planting, the professionalism was outstanding. They built a beautiful stone retaining wall and installed a lush patio garden that we now use every evening."
+                        "Scott is customer oriented and very accessible when it came to answering questions. The plants provided were high quality. Seven months after installation, when my young trees were leaning over after heavy winds, Scott straightened them and staked all seven upright at no extra charge. Exceptional customer service and quality product at a fair price."
                     </p>
 <div class="mt-auto">
-<p class="font-label text-label text-primary uppercase tracking-widest" style="">Sarah M.</p>
-<p class="font-body-sm text-body-sm text-on-surface-variant" style="">Highlands</p>
+<p class="font-label text-label text-primary uppercase tracking-widest" style="">Dan M.</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant" style="">6 reviews</p>
 </div>
 </div>
 <!-- Card 2 -->
@@ -163,11 +169,11 @@ tailwind.config = {
 <span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span>
 </div>
 <p class="font-body-md text-body-md text-on-surface mb-6 flex-grow" style="">
-                        "We've used several landscaping companies over the years, but Scott's is by far the best. Their attention to detail during the spring cleanup was impeccable, and the new mulch beds look fantastic. Highly recommend for both large projects and regular maintenance."
+                        "We found Scott through landscaping reviews and decided to use him for a full front redo including landscape lighting, tree removal, stump grinding, and new plants. We were given a drawing of the proposed design and actual pictures of the plants. The finished product is incredible—a large transformation done perfectly. We are very very happy!"
                     </p>
 <div class="mt-auto">
-<p class="font-label text-label text-primary uppercase tracking-widest" style="">James &amp; Linda T.</p>
-<p class="font-body-sm text-body-sm text-on-surface-variant" style="">St. Matthews</p>
+<p class="font-label text-label text-primary uppercase tracking-widest" style="">John Ewing</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant" style="">7 reviews</p>
 </div>
 </div>
 <!-- Card 3 -->
@@ -180,11 +186,11 @@ tailwind.config = {
 <span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span>
 </div>
 <p class="font-body-md text-body-md text-on-surface mb-6 flex-grow" style="">
-                        "Absolutely thrilled with the hardscaping work. They installed a natural stone walkway that perfectly matches the historic character of our home. The crew was punctual, polite, and left the site immaculate every day."
+                        "Extremely responsive, transparent, and thorough on scheduling and pricing. Scott's crew completed a huge lava rock removal, replaced all our plants, installed lights, and planted a tree in two days. Upon completion, Scott gave us a very informative walk through with instructions on keeping our new plants healthy."
                     </p>
 <div class="mt-auto">
-<p class="font-label text-label text-primary uppercase tracking-widest" style="">David R.</p>
-<p class="font-body-sm text-body-sm text-on-surface-variant" style="">Crescent Hill</p>
+<p class="font-label text-label text-primary uppercase tracking-widest" style="">Justin Manning</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant" style="">Local Guide · 76 reviews</p>
 </div>
 </div>
 <!-- Card 4 -->
@@ -197,11 +203,11 @@ tailwind.config = {
 <span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span>
 </div>
 <p class="font-body-md text-body-md text-on-surface mb-6 flex-grow" style="">
-                        "Scott listened carefully to our vision for a low-maintenance, drought-tolerant front yard and delivered beyond our expectations. The plant selection is beautiful and thriving. A truly professional outfit."
+                        "Scott provided excellent design and installation that fits our space nicely! He was flexible in his design, allowing us to ask multiple questions and swap out a couple of plants. We are already getting compliments from the neighbors. Thank you Scott!"
                     </p>
 <div class="mt-auto">
-<p class="font-label text-label text-primary uppercase tracking-widest" style="">Emily W.</p>
-<p class="font-body-sm text-body-sm text-on-surface-variant" style="">Norton Commons</p>
+<p class="font-label text-label text-primary uppercase tracking-widest" style="">Eric G</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant" style="">Local Guide · 67 reviews</p>
 </div>
 </div>
 <!-- Card 5 -->
@@ -214,11 +220,11 @@ tailwind.config = {
 <span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span>
 </div>
 <p class="font-body-md text-body-md text-on-surface mb-6 flex-grow" style="">
-                        "Reliable, honest, and hardworking. They handle our commercial property maintenance and always do a stellar job keeping the grounds looking sharp for our clients."
+                        "Fast response to quote request, worked us into the schedule quickly, great communication, confirmed everything I wanted twice, showed up on time and completed the job timely. I'm over the moon with the results and will definitely use Scott in the future. Highly recommended!"
                     </p>
 <div class="mt-auto">
-<p class="font-label text-label text-primary uppercase tracking-widest" style="">Michael K.</p>
-<p class="font-body-sm text-body-sm text-on-surface-variant" style="">Downtown</p>
+<p class="font-label text-label text-primary uppercase tracking-widest" style="">Charlene Doss</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant" style="">6 reviews</p>
 </div>
 </div>
 <!-- Card 6 -->
@@ -231,11 +237,11 @@ tailwind.config = {
 <span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span>
 </div>
 <p class="font-body-md text-body-md text-on-surface mb-6 flex-grow" style="">
-                        "The drainage solution they implemented saved our basement this spring. They didn't just fix the problem; they made the dry creek bed look like an intentional, beautiful landscape feature."
+                        "Scott was prompt in responding to our estimate request and never tried to sell us more than we needed for our home. We selected Scott because he is a local small business we wanted to support. Installation was completed before the estimated date and we received several compliments on our landscape lighting."
                     </p>
 <div class="mt-auto">
-<p class="font-label text-label text-primary uppercase tracking-widest" style="">The Anderson Family</p>
-<p class="font-body-sm text-body-sm text-on-surface-variant" style="">Anchorage</p>
+<p class="font-label text-label text-primary uppercase tracking-widest" style="">Jeff Hall</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant" style="">6 reviews</p>
 </div>
 </div>
 </div>
@@ -270,14 +276,14 @@ tailwind.config = {
 <!-- Links -->
 <div class="md:col-span-2 grid grid-cols-2 gap-8">
 <div class="flex flex-col space-y-3">
-<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed inline-block w-fit" href="index.html">Home</a>
-<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed inline-block w-fit" href="about_us.html">About Us</a>
-<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed inline-block w-fit" href="services.html">Services</a>
+<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed block w-fit py-2" href="index.html">Home</a>
+<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed block w-fit py-2" href="about_us.html">About Us</a>
+<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed block w-fit py-2" href="services.html">Services</a>
 </div>
 <div class="flex flex-col space-y-3">
 
-<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed inline-block w-fit" href="reviews.html">Reviews</a>
-<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed inline-block w-fit" href="contact_us.html" style="">Contact</a>
+<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed block w-fit py-2" href="reviews.html">Reviews</a>
+<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed block w-fit py-2" href="contact_us.html" style="">Contact</a>
 </div>
 </div>
 <!-- Contact Info (Implicitly requested by general footer patterns) -->
@@ -297,4 +303,24 @@ tailwind.config = {
 </div>
 </div>
 </footer>
+<script>
+(() => {
+    const button = document.getElementById('mobileMenuButton');
+    const menu = document.getElementById('mobileMenu');
+    if (!button || !menu) return;
+
+    button.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+        const isOpen = !menu.classList.contains('hidden');
+        button.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    menu.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+            menu.classList.add('hidden');
+            button.setAttribute('aria-expanded', 'false');
+        });
+    });
+})();
+</script>
 </body></html>

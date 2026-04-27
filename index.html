@@ -76,8 +76,8 @@ tailwind.config = {
 <body class="bg-background text-on-background font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
 <!-- TopAppBar -->
 <nav class="bg-white/95 dark:bg-stone-950/95 backdrop-blur-sm sticky top-0 w-full z-50 border-b border-[#C49A6C]/30 dark:border-stone-800 flat no shadows">
-<div class="flex justify-between items-center max-w-[1200px] mx-auto px-6 h-24">
-<a class="text-2xl font-bold text-[#2D4A2F] dark:text-[#8FB28A] tracking-tighter flex items-center gap-2" href="index.html"><img src="images/favicon.ico" alt="Scott's Landscaping Logo" class="w-8 h-8"/>Scott's Landscaping</a>
+<div class="flex justify-between items-center max-w-[1200px] mx-auto px-6 h-16 md:h-24">
+<a class="text-xl md:text-2xl font-bold text-[#2D4A2F] dark:text-[#8FB28A] tracking-tighter flex items-center gap-2" href="index.html"><img src="images/favicon.ico" alt="Scott's Landscaping Logo" class="w-7 h-7 md:w-8 md:h-8"/>Scott's Landscaping</a>
 <div class="hidden md:flex space-x-8 items-center">
 <a aria-current="page" class="text-[#2D4A2F] dark:text-[#8FB28A] font-['Playfair_Display',_serif] text-xl tracking-tight relative group px-1 py-1" href="index.html">
     Home
@@ -97,21 +97,37 @@ tailwind.config = {
 </a>
 <a class="hidden md:inline-flex items-center justify-center px-6 py-3 bg-primary text-on-primary font-label text-label uppercase tracking-widest hover:bg-surface-tint transition-colors duration-300 rounded" href="contact_us.html">Free Quote</a>
 </div>
-<!-- Mobile menu button (visual only) -->
-<button class="md:hidden text-primary p-2" style="">
+<!-- Mobile menu button -->
+<button id="mobileMenuButton" class="md:hidden text-primary p-2" type="button" aria-controls="mobileMenu" aria-expanded="false">
 <span class="material-symbols-outlined" style='font-variation-settings: "FILL" 0;'>menu</span>
 </button>
 </div>
 </nav>
+<div id="mobileMenu" class="md:hidden hidden fixed top-16 left-0 right-0 w-full z-40 bg-white/95 dark:bg-stone-950/95 border-b border-[#C49A6C]/30 dark:border-stone-800 max-h-[calc(100vh-64px)] overflow-y-auto">
+<div class="max-w-[1200px] mx-auto px-6 py-4 space-y-2">
+<a aria-current="page" class="block px-3 py-2 rounded-md text-primary font-serif text-lg" href="index.html">Home</a>
+<a class="block px-3 py-2 rounded-md text-on-surface-variant font-serif text-lg hover:bg-[#8FB28A]/10 transition-colors" href="about_us.html">About Us</a>
+<a class="block px-3 py-2 rounded-md text-on-surface-variant font-serif text-lg hover:bg-[#8FB28A]/10 transition-colors" href="services.html">Services</a>
+<a class="block px-3 py-2 rounded-md text-on-surface-variant font-serif text-lg hover:bg-[#8FB28A]/10 transition-colors" href="reviews.html">Reviews</a>
+<a class="block px-3 py-2 rounded-md text-on-surface-variant font-serif text-lg hover:bg-[#8FB28A]/10 transition-colors" href="contact_us.html">Contact</a>
+<div class="pt-3 mt-3 border-t border-outline-variant/30 space-y-2">
+<a class="flex items-center gap-2 px-3 py-2 rounded-md text-on-surface-variant font-serif text-lg" href="tel:+15028214542">
+<span class="material-symbols-outlined" style='font-variation-settings: "FILL" 0;'>call</span>
++1 (502) 821-4542
+</a>
+<a class="inline-flex items-center justify-center w-full px-6 py-3 bg-primary text-on-primary font-label text-label uppercase tracking-widest hover:bg-surface-tint transition-colors rounded" href="contact_us.html">Free Quote</a>
+</div>
+</div>
+</div>
 <main>
 <!-- Hero Section -->
-<section class="relative min-h-[870px] flex items-center justify-center overflow-hidden">
+<section class="relative min-h-[640px] sm:min-h-[720px] md:min-h-[870px] flex items-center justify-center overflow-hidden">
 <img alt="lush garden with warm lighting" class="absolute inset-0 w-full h-full object-cover object-center z-0" data-alt="A freshly landscaped residential front yard featuring dark mulch, young green shrubs, a decorative stone pathway, an angel statue, and a classic metal bench, representing Scott's hands-on craftsmanship." src="images/homepage.png"/>
 <div class="absolute inset-0 bg-white/60 z-10"></div>
 <div class="relative z-20 max-w-[1200px] mx-auto px-6 w-full text-center">
 <div class="max-w-4xl mx-auto space-y-stack-lg">
-<h1 class="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-primary leading-tight tracking-tight">
-                        Louisville's most awarded landscaper — designing outdoor spaces since 1999.
+<h1 class="font-h1 text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-primary leading-tight tracking-tight">
+                        Louisville's most awarded landscaper: designing outdoor spaces since 1999.
                     </h1>
 <p class="font-body text-xl md:text-2xl text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
                         I design every project myself, select every plant by hand, and stay on site until the job is done right.
@@ -131,7 +147,7 @@ tailwind.config = {
 <!-- Credentials Bar -->
 <section class="bg-inverse-surface py-8 border-t-4 border-surface-tint">
 <div class="max-w-[1200px] mx-auto px-6">
-<div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-inverse-on-surface/30">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center md:divide-x md:divide-inverse-on-surface/30">
 <div class="flex flex-col items-center justify-center space-y-2">
 <span class="material-symbols-outlined text-surface-tint text-3xl">award_star</span>
 <p class="text-inverse-on-surface font-label text-sm uppercase tracking-wider">Angie's List Super Service</p>
@@ -156,7 +172,7 @@ tailwind.config = {
 <section class="bg-surface-container-lowest py-section-v-padding-lg">
 <div class="max-w-[1200px] mx-auto px-6">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-<div class="relative h-[600px] rounded-lg overflow-hidden border border-outline-variant/30">
+<div class="relative h-[320px] sm:h-[420px] md:h-[600px] rounded-lg overflow-hidden border border-outline-variant/30">
     <iframe
         class="absolute inset-0 w-full h-full border-0"
         src="https://www.google.com/maps?q=503%20Willowhurst%20Pl%2C%20Louisville%2C%20KY%2040223%2C%20United%20States&z=15&output=embed"
@@ -241,7 +257,7 @@ tailwind.config = {
 .portfolio-carousel { overflow: hidden; }
 .portfolio-track { display: flex; gap: 1.5rem; align-items: center; will-change: transform; }
 .portfolio-track:hover { --paused: 1; }
-.portfolio-item { flex: 0 0 auto; width: 350px; aspect-ratio: 4/3; }
+.portfolio-item { flex: 0 0 auto; width: min(80vw, 350px); aspect-ratio: 4/3; }
 .portfolio-item img { width: 100%; height: 100%; object-fit: cover; border-radius: 0.75rem; border: 1px solid rgba(202, 199, 208, 0.3); display: block; transition: transform 0.3s ease; }
 .portfolio-item:hover img { transform: scale(1.05); }
 </style>
@@ -336,11 +352,11 @@ tailwind.config = {
 <span class="material-symbols-outlined absolute top-6 right-6 text-surface-tint/40" style="font-size: 48px;">format_quote</span>
 <div class="relative z-10 space-y-4">
 <p class="text-on-surface-variant font-body-md italic leading-relaxed">
-                                "Scott transformed our overgrown backyard into a pristine, functional living area. His attention to detail and personal involvement throughout the entire process was remarkable. We couldn't be happier."
+                                "Scott landscaped our new construction home and added landscape lighting. Very professional service, great quality plants at a good value. Highly recommended."
                             </p>
 <div class="pt-4 border-t border-outline-variant/30">
-<p class="font-bold text-primary">Sarah M.</p>
-<p class="text-stone-600 text-sm">St. Matthews</p>
+<p class="font-bold text-primary">Amanda H.</p>
+<p class="text-stone-600 text-sm">J Town</p>
 </div>
 </div>
 </div>
@@ -349,11 +365,11 @@ tailwind.config = {
 <span class="material-symbols-outlined absolute top-6 right-6 text-surface-tint/40" style="font-size: 48px;">format_quote</span>
 <div class="relative z-10 space-y-4">
 <p class="text-on-surface-variant font-body-md italic leading-relaxed">
-                                "The landscape design Scott created perfectly complemented our historic home. The quality of the plants he selected and the precision of the installation exceeded our very high expectations."
+                                "The entry to my house looks great. Highly recommended. Yard looks great and I am the envy of the neighborhood."
                             </p>
 <div class="pt-4 border-t border-outline-variant/30">
-<p class="font-bold text-primary">James &amp; Eleanor T.</p>
-<p class="text-stone-600 text-sm">Prospect</p>
+<p class="font-bold text-primary">Steve L.</p>
+<p class="text-stone-600 text-sm">Hurstbourne</p>
 </div>
 </div>
 </div>
@@ -362,11 +378,11 @@ tailwind.config = {
 <span class="material-symbols-outlined absolute top-6 right-6 text-surface-tint/40" style="font-size: 48px;">format_quote</span>
 <div class="relative z-10 space-y-4">
 <p class="text-on-surface-variant font-body-md italic leading-relaxed">
-                                "We hired Scott for a comprehensive lighting project. The results are stunning. Our property now feels secure and looks absolutely magical at night. A true professional."
+                                "Scott recently installed this row of privacy evergreens. They did a great job for an affordable price. Highly recommended."
                             </p>
 <div class="pt-4 border-t border-outline-variant/30">
-<p class="font-bold text-primary">David W.</p>
-<p class="text-stone-600 text-sm">Highlands</p>
+<p class="font-bold text-primary">Elizabeth G.</p>
+<p class="text-stone-600 text-sm">Lake Forest</p>
 </div>
 </div>
 </div>
@@ -401,14 +417,14 @@ tailwind.config = {
 <!-- Links -->
 <div class="md:col-span-2 grid grid-cols-2 gap-8">
 <div class="flex flex-col space-y-3">
-<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed inline-block w-fit" href="index.html">Home</a>
-<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed inline-block w-fit" href="about_us.html">About Us</a>
-<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed inline-block w-fit" href="services.html">Services</a>
+<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed block w-fit py-2" href="index.html">Home</a>
+<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed block w-fit py-2" href="about_us.html">About Us</a>
+<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed block w-fit py-2" href="services.html">Services</a>
 </div>
 <div class="flex flex-col space-y-3">
 
-<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed inline-block w-fit" href="reviews.html">Reviews</a>
-<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed inline-block w-fit" href="contact_us.html" style="">Contact</a>
+<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed block w-fit py-2" href="reviews.html">Reviews</a>
+<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed block w-fit py-2" href="contact_us.html" style="">Contact</a>
 </div>
 </div>
 <!-- Contact Info (Implicitly requested by general footer patterns) -->
@@ -428,4 +444,24 @@ tailwind.config = {
 </div>
 </div>
 </footer>
+<script>
+(() => {
+  const button = document.getElementById('mobileMenuButton');
+  const menu = document.getElementById('mobileMenu');
+  if (!button || !menu) return;
+
+  button.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+    const isOpen = !menu.classList.contains('hidden');
+    button.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  menu.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      menu.classList.add('hidden');
+      button.setAttribute('aria-expanded', 'false');
+    });
+  });
+})();
+</script>
 </body></html>

@@ -76,8 +76,8 @@ tailwind.config = {
 <body class="font-sans antialiased selection:bg-moss selection:text-white">
 <!-- TopAppBar -->
 <nav class="bg-white/95 dark:bg-stone-950/95 backdrop-blur-sm sticky top-0 w-full z-50 border-b border-[#C49A6C]/30 dark:border-stone-800 flat no shadows">
-<div class="flex justify-between items-center max-w-[1200px] mx-auto px-6 h-24">
-<a class="text-2xl font-bold text-[#2D4A2F] dark:text-[#8FB28A] tracking-tighter flex items-center gap-2" href="index.html"><img src="images/favicon.ico" alt="Scott's Landscaping Logo" class="w-8 h-8"/>Scott's Landscaping</a>
+<div class="flex justify-between items-center max-w-[1200px] mx-auto px-6 h-16 md:h-24">
+<a class="text-xl md:text-2xl font-bold text-[#2D4A2F] dark:text-[#8FB28A] tracking-tighter flex items-center gap-2" href="index.html"><img src="images/favicon.ico" alt="Scott's Landscaping Logo" class="w-7 h-7 md:w-8 md:h-8"/>Scott's Landscaping</a>
 <div class="hidden md:flex space-x-8 items-center">
 <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors font-serif text-lg tracking-tight hover:bg-[#8FB28A]/10 transition-all duration-300 px-3 py-2 rounded-md" href="index.html">Home</a>
 <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors font-serif text-lg tracking-tight hover:bg-[#8FB28A]/10 transition-all duration-300 px-3 py-2 rounded-md" href="about_us.html">About Us</a>
@@ -97,22 +97,38 @@ tailwind.config = {
 </a>
 <a class="hidden md:inline-flex items-center justify-center px-6 py-3 bg-primary text-on-primary font-label text-label uppercase tracking-widest hover:bg-surface-tint transition-colors duration-300 rounded" href="contact_us.html">Free Quote</a>
 </div>
-<!-- Mobile menu button (visual only) -->
-<button class="md:hidden text-primary p-2" style="">
+<!-- Mobile menu button -->
+<button id="mobileMenuButton" class="md:hidden text-primary p-2" type="button" aria-controls="mobileMenu" aria-expanded="false">
 <span class="material-symbols-outlined" style='font-variation-settings: "FILL" 0;'>menu</span>
 </button>
 </div>
 </nav>
-<main class="pt-24">
+<div id="mobileMenu" class="md:hidden hidden fixed top-16 left-0 right-0 w-full z-40 bg-white/95 dark:bg-stone-950/95 border-b border-[#C49A6C]/30 dark:border-stone-800 max-h-[calc(100vh-64px)] overflow-y-auto">
+<div class="max-w-[1200px] mx-auto px-6 py-4 space-y-2">
+<a class="block px-3 py-2 rounded-md text-on-surface-variant font-serif text-lg hover:bg-[#8FB28A]/10 transition-colors" href="index.html">Home</a>
+<a class="block px-3 py-2 rounded-md text-on-surface-variant font-serif text-lg hover:bg-[#8FB28A]/10 transition-colors" href="about_us.html">About Us</a>
+<a aria-current="page" class="block px-3 py-2 rounded-md text-primary font-serif text-lg" href="services.html">Services</a>
+<a class="block px-3 py-2 rounded-md text-on-surface-variant font-serif text-lg hover:bg-[#8FB28A]/10 transition-colors" href="reviews.html">Reviews</a>
+<a class="block px-3 py-2 rounded-md text-on-surface-variant font-serif text-lg hover:bg-[#8FB28A]/10 transition-colors" href="contact_us.html">Contact</a>
+<div class="pt-3 mt-3 border-t border-outline-variant/30 space-y-2">
+<a class="flex items-center gap-2 px-3 py-2 rounded-md text-on-surface-variant font-serif text-lg" href="tel:+15028214542">
+<span class="material-symbols-outlined" style='font-variation-settings: "FILL" 0;'>call</span>
++1 (502) 821-4542
+</a>
+<a class="inline-flex items-center justify-center w-full px-6 py-3 bg-primary text-on-primary font-label text-label uppercase tracking-widest hover:bg-surface-tint transition-colors rounded" href="contact_us.html">Free Quote</a>
+</div>
+</div>
+</div>
+<main class="pt-16 md:pt-24">
 <!-- BEGIN: Hero Section -->
-<section class="py-24 px-6 md:px-12 max-w-5xl mx-auto text-center">
-<h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight text-primary text-balance mx-auto">
-        Everything your outdoor space needs — designed and installed by me.
+<section class="py-16 md:py-24 px-6 md:px-12 max-w-5xl mx-auto text-center">
+<h1 class="font-h1 text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-primary leading-tight tracking-tight">
+        Everything your outdoor space needs is designed and installed by me.
       </h1>
 </section>
 <!-- END: Hero Section -->
 <!-- BEGIN: Landscape Design Section -->
-<section class="py-16 px-6 md:px-12 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16 bg-white">
+<section class="py-16 px-6 md:px-12 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-16 bg-white">
 <div class="w-full md:w-1/2">
 <img alt="Landscape Development Plan Blueprint" class="w-full h-auto object-cover border border-gray-200 blueprint-shadow p-2 bg-white" src="images/slide1.jpeg"/>
 </div>
@@ -126,7 +142,7 @@ tailwind.config = {
 </section>
 <!-- END: Landscape Design Section -->
 <!-- BEGIN: Landscape Installation Section -->
-<section class="py-24 px-6 md:px-12 max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-16 bg-linen">
+<section class="py-24 px-6 md:px-12 max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-10 md:gap-16 bg-linen">
 <div class="w-full md:w-1/2 space-y-8">
 <h2 class="font-serif text-3xl md:text-4xl font-semibold text-primary">Landscape Installation</h2>
 <div class="space-y-6">
@@ -154,7 +170,7 @@ tailwind.config = {
 </div>
 </div>
 <div class="w-full md:w-1/2 flex justify-end">
-<img alt="Garden Decoration from Scott's Landscaping in Louisville" class="w-full max-w-lg h-auto object-cover border border-gray-200 blueprint-shadow p-2 bg-white" src="images/slide4.jpeg"/>
+<img alt="Garden Decoration from Scott's Landscaping in Louisville" class="w-full max-w-full md:max-w-lg h-auto object-cover border border-gray-200 blueprint-shadow p-2 bg-white" src="images/slide4.jpeg"/>
 </div>
 </section>
 <!-- END: Landscape Installation Section -->
@@ -176,10 +192,6 @@ tailwind.config = {
 <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
 <!-- Landscape Replacement Card -->
 <div class="bg-white p-10 rounded-lg shadow-sm border border-gray-100 space-y-4">
-<div class="text-primary text-2xl mb-6">
-<!-- Icon placeholder -->
-<svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2L8 9H11V20H13V9H16L12 2Z"></path></svg>
-</div>
 <h3 class="font-serif text-2xl font-semibold text-primary">Landscape Replacement</h3>
 <p class="text-mediumgray text-sm leading-relaxed">
             Overgrown or outdated landscapes can detract from your property's value. We carefully remove old, struggling plants and replace them with fresh, resilient varieties suited for the current environment.
@@ -187,10 +199,6 @@ tailwind.config = {
 </div>
 <!-- Winter Tree Planting Card -->
 <div class="bg-white p-10 rounded-lg shadow-sm border border-gray-100 space-y-4">
-<div class="text-primary text-2xl mb-6">
-<!-- Icon placeholder -->
-<svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M12 3v18m-9-9h18m-4.5-4.5L7.5 16.5M7.5 7.5l9 9" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-</div>
 <h3 class="font-serif text-2xl font-semibold text-primary">Winter Tree Planting</h3>
 <p class="text-mediumgray text-sm leading-relaxed">
             Contrary to popular belief, winter is an ideal time to plant certain trees. Dormancy reduces transplant shock, allowing roots to establish before the spring growth spurt. Let's discuss which species thrive with winter planting.
@@ -227,14 +235,14 @@ tailwind.config = {
 <!-- Links -->
 <div class="md:col-span-2 grid grid-cols-2 gap-8">
 <div class="flex flex-col space-y-3">
-<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed inline-block w-fit" href="index.html">Home</a>
-<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed inline-block w-fit" href="about_us.html">About Us</a>
-<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed inline-block w-fit" href="services.html">Services</a>
+<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed block w-fit py-2" href="index.html">Home</a>
+<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed block w-fit py-2" href="about_us.html">About Us</a>
+<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed block w-fit py-2" href="services.html">Services</a>
 </div>
 <div class="flex flex-col space-y-3">
 
-<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed inline-block w-fit" href="reviews.html">Reviews</a>
-<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed inline-block w-fit" href="contact_us.html" style="">Contact</a>
+<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed block w-fit py-2" href="reviews.html">Reviews</a>
+<a class="text-stone-400 hover:text-[#8FB28A] transition-colors hover:translate-x-1 transition-transform duration-200 focus-within:ring-1 focus-within:ring-[#8FB28A] font-serif text-sm tracking-wide leading-relaxed block w-fit py-2" href="contact_us.html" style="">Contact</a>
 </div>
 </div>
 <!-- Contact Info (Implicitly requested by general footer patterns) -->
@@ -254,4 +262,24 @@ tailwind.config = {
 </div>
 </div>
 </footer>
+<script>
+(() => {
+    const button = document.getElementById('mobileMenuButton');
+    const menu = document.getElementById('mobileMenu');
+    if (!button || !menu) return;
+
+    button.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+        const isOpen = !menu.classList.contains('hidden');
+        button.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    menu.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+            menu.classList.add('hidden');
+            button.setAttribute('aria-expanded', 'false');
+        });
+    });
+})();
+</script>
 </body></html>
