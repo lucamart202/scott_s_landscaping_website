@@ -1,0 +1,5 @@
+# Robots.txt for Scott's Landscaping
+User-agent: *
+Allow: /
+Disallow: /thank_you.html
+Disallow: /images/
